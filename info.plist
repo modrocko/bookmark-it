@@ -825,7 +825,7 @@ python3 scripts/list_tags.py "$1"
 				<key>subtext</key>
 				<string>Show tagged items grouped by tag</string>
 				<key>title</key>
-				<string>Show tagged items</string>
+				<string>List tagged items</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
