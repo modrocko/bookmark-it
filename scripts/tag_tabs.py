@@ -64,49 +64,6 @@ else:
     end tell
     '''
 
-
-## AppleScript to extract tab(s) info
-#if tag_scope == "all_tabs_all_windows":
-#    script = f'''
-#    tell application "{browser}"
-#        if it is running and (count of windows) > 0 then
-#            set output to ""
-#            repeat with w in windows
-#                repeat with t in tabs of w
-#                    set tabTitle to title of t
-#                    set tabURL to URL of t
-#                    set output to output & tabTitle & "||" & tabURL & "%%"
-#                end repeat
-#            end repeat
-#            return output
-#        end if
-#    end tell
-#    '''
-#elif tag_scope == "all_tabs_window":
-#    script = f'''
-#    tell application "{browser}"
-#        if it is running and (count of windows) > 0 then
-#            set output to ""
-#            repeat with t in tabs of front window
-#                set tabTitle to title of t
-#                set tabURL to URL of t
-#                set output to output & tabTitle & "||" & tabURL & "%%"
-#            end repeat
-#            return output
-#        end if
-#    end tell
-#    '''
-#else:  # default to single
-#    script = f'''
-#    tell application "{browser}"
-#        if it is running and (count of windows) > 0 then
-#            set tabTitle to title of active tab of front window
-#            set tabURL to URL of active tab of front window
-#            return tabTitle & "||" & tabURL & "%%"
-#        end if
-#    end tell
-#    '''
-
 # Run AppleScript
 try:
     result = subprocess.check_output(["osascript", "-e", script])

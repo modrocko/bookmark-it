@@ -10,7 +10,7 @@ So, to summarize... a consolidated Alfred system to:
 ✓  Keep your work moving forward  
 ✓  Keep your brain sane
 
-Works with: Apple Mail ∙ Apple Finder ∙ Chrome-based browsers
+Works with: Apple Mail ∙ Apple Finder ∙ Several browsers *(excluding Firefox)*
 
 ▸ Requires [jq](https://formulae.brew.sh/formula/jq)
 
