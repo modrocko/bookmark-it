@@ -409,7 +409,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
-				<string>tagi</string>
+				<string>tagi||ti</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -616,7 +616,7 @@ osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\"
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>tags</string>
+				<string>tags||ts</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -803,7 +803,7 @@ osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_list_tags\"
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>tagl</string>
+				<string>tagl||tl</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
