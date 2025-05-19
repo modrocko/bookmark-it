@@ -584,7 +584,6 @@ python3 scripts/open_item.py "$1"
 
 caller="${caller}"
 
-# call the right refresh trigger
 osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\" in workflow \"com.toddsgotapen.tagit\" with argument \"$tag\""</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -947,7 +946,6 @@ python3 scripts/delete_tag.py "$1"</string>
 				<string>cd "$alfred_workflow_directory"
 python3 scripts/rename_title.py "$1"
 
-tag="${1%%||*}"
 caller="${caller}"
 
 # call the right refresh trigger
