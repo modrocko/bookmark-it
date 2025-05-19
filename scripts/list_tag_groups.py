@@ -56,7 +56,7 @@ labels = {
 icons = {
   "email": { "path": "/System/Applications/Mail.app", "type": "fileicon"},
   "bookmark": get_bookmark_icon(),
-  "file":  { "path": "icons/file.png" }
+  "file": { "path": "/System/Library/CoreServices/Finder.app", "type": "fileicon" }
 }
 
 for item_type, group in counts.items():
