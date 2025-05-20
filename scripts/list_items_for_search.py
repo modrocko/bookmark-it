@@ -58,7 +58,6 @@ for group in tag_groups:
             url = item.get("url", "")
             subtitle_detail = url
             path = url
-            #icon = { "path": "icons/bookmark.png" }
             icon = utils.get_icon(item, bookmark_icon)
 
         else:
