@@ -2,7 +2,7 @@ import os
 import sys
 import json
 import urllib.parse
-from utils import get_bookmark_icon
+import utils
 
 query = sys.argv[1].strip().replace("!", "❗").lower() if len(sys.argv) > 1 else ""
 print(f"QUERY: {query}", file=sys.stderr)
@@ -24,7 +24,7 @@ items = [{
     "icon": { "path": "icons/info.png" }
 }]
 
-bookmark_icon = get_bookmark_icon()
+bookmark_icon = utils.get_bookmark_icon()
 
 for group in tag_groups:
     tag = group.get("tag", "")
@@ -59,7 +59,7 @@ for group in tag_groups:
             subtitle_detail = url
             path = url
             #icon = { "path": "icons/bookmark.png" }
-            icon = bookmark_icon
+            icon = utils.get_icon(item, bookmark_icon)
 
         else:
             continue  # skip unknown types

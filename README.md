@@ -2,7 +2,7 @@
 
 Tag emails, files, folders & web pages for easy access later on.
 
-I created this workflow to keep related items together for certain activities — all in one place. Projects, research, orders, favorites, recipes... whatever. I mainly use this for short term stuff. Less so for long-term bookmarks. I can tag, find & open email, files, folders & webpages in a breeze. 
+I created this workflow to keep related items together for certain activities — all in one place. Projects, research, orders, favorites, recipes... whatever. I mainly use this for short term stuff, like the categories mentioned. But works great for long-term bookmarks too. I can tag, find & open email, files, folders & webpages — in a breeze. 
 
 So, to summarize... a consolidated Alfred system to:  
 
@@ -13,6 +13,12 @@ So, to summarize... a consolidated Alfred system to:
 Works with: Apple Mail ∙ Apple Finder ∙ Several browsers *(excluding Firefox)*
 
 ▸ Requires [jq](https://formulae.brew.sh/formula/jq)
+
+## Cool shit
+
+✅ Drop any logo .png file into the icons folder for your tagged bookmarks, based on domain urls. They'll show up as the default icon for those domains.
+
+✅ Type '!' to mark tags or items as urgent ('❗'). Find them instantly too specifying '!'.
 
 ## Usage
 
