@@ -12,7 +12,7 @@ def get_bookmark_icon():
         "Arc": "/Applications/Arc.app"
     }
 
-    icon_path = paths.get(browser, "icons/bookmark.png")
+    icon_path = paths.get(browser)
     icon = { "path": icon_path }
     if icon_path.endswith(".app"):
         icon["type"] = "fileicon"

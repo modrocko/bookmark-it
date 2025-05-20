@@ -12,7 +12,7 @@ if not query:
         "title": "Specify tag",
         "subtitle": "Type or select a tag",
         "valid": False,
-        "icon": { "path": "icons/info.png" }
+        "icon": { "path": "info.png" }
     }]
 else:
     items = []

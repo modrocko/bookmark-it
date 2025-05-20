@@ -72,7 +72,7 @@ if not items:
         "title": "No matches found",
         "subtitle": "So then tag some, silly",
         "valid": False,
-        "icon": { "path": "icons/info.png" }
+        "icon": { "path": "info.png" }
     })
 
 items.sort(key=lambda x: x["title"].lower())

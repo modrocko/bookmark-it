@@ -21,7 +21,7 @@ items = [{
     "title": "Keyboard shortcuts",
     "subtitle": "↵ Open • ⌘ Remove item • ⌥ Rename title",
     "valid": False,
-    "icon": { "path": "icons/info.png" }
+    "icon": { "path": "info.png" }
 }]
 
 bookmark_icon = utils.get_bookmark_icon()
@@ -105,7 +105,7 @@ if len(items) == 1:
         "title": "No matches found",
         "subtitle": "So tag some!",
         "valid": False,
-        "icon": { "path": "icons/info.png" }
+        "icon": { "path": "info.png" }
     }]
 
 print(json.dumps({ "items": items }))
