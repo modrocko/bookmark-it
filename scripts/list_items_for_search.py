@@ -63,8 +63,15 @@ for group in tag_groups:
         else:
             continue  # skip unknown types
 
-        if not any(query in (x or "").lower() for x in [tag, label, type_, subtitle_detail]):
+
+        # perform search
+        terms = query.split()
+        if not all(
+            any(term in (x or "").lower() for x in [tag, label, type_, subtitle_detail])
+            for term in terms
+        ):
             continue
+
 
         subtitle = f"[{tag}] • {subtitle_detail}"
 
