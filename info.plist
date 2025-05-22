@@ -170,7 +170,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>E04820B5-E336-4756-8181-4FE9FC938D3D</string>
+				<string>0C11029C-6EA0-4F3A-B2DA-445D04A38860</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -258,6 +258,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>3B79DBBE-65FB-4838-A630-7F460CFF70DA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B4E0A683-D35F-4DBA-A109-839CD4358D5E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D3D67F79-D914-4C82-94F5-6452D25D83AC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -550,6 +563,37 @@ osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\"
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>17</integer>
+				<key>hotmod</key>
+				<integer>262144</integer>
+				<key>hotstring</key>
+				<string>T</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>51100120-8934-4147-8F61-66981D1FE39B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -728,37 +772,6 @@ python3 scripts/list_items_for_tag.py "$1"
 			<string>45A4A40B-A8DA-4F12-8E1C-29F192612474</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>17</integer>
-				<key>hotmod</key>
-				<integer>262144</integer>
-				<key>hotstring</key>
-				<string>T</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>51100120-8934-4147-8F61-66981D1FE39B</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -981,6 +994,82 @@ osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\"
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>6060256D-76A0-46B7-A54D-FB318D145A96</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import json
+import os
+import subprocess
+
+workflow_data = os.getenv('alfred_workflow_data')
+workflow_name = os.getenv('alfred_workflow_name', 'Tag It')
+
+input_path = os.path.join(workflow_data, 'items.json')
+output_path = os.path.join(workflow_data, 'bookmarks.md')
+
+with open(input_path, 'r') as f:
+    data = json.load(f)
+
+with open(output_path, 'w') as f:
+    for group in data:
+        tag = group.get('tag', 'No tag')
+        bookmarks = [
+            item for item in group.get('items', [])
+            if item.get('type') == 'bookmark'
+        ]
+        if bookmarks:
+            f.write(f"## {tag}\n\n")
+            for b in bookmarks:
+                title = b.get('title', 'No title')
+                url = b.get('url', '')
+                f.write(f"- [{title}]({url})\n")
+            f.write("\n")
+
+# **Show notification**
+subprocess.run([
+    "osascript", "-e",
+    f'display notification "Exported bookmarks to bookmarks.md" with title "{workflow_name}"'
+])</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>9</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D3D67F79-D914-4C82-94F5-6452D25D83AC</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>:tag export</string>
+				<key>subtext</key>
+				<string>Export urls to bookmarks.md</string>
+				<key>text</key>
+				<string>Export urls</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>B4E0A683-D35F-4DBA-A109-839CD4358D5E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1359,12 +1448,14 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>xpos</key>
 			<real>135</real>
 			<key>ypos</key>
-			<real>625</real>
+			<real>315</real>
 		</dict>
 		<key>525CCC53-7746-4B83-8850-E244D8A83819</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
+			<key>note</key>
+			<string>invoke util</string>
 			<key>xpos</key>
 			<real>540</real>
 			<key>ypos</key>
@@ -1439,6 +1530,17 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>ypos</key>
 			<real>70</real>
 		</dict>
+		<key>B4E0A683-D35F-4DBA-A109-839CD4358D5E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>invoke export urls</string>
+			<key>xpos</key>
+			<real>95</real>
+			<key>ypos</key>
+			<real>1025</real>
+		</dict>
 		<key>B6FDE0DC-E5D0-41BB-9BBA-EF3F215DCE41</key>
 		<dict>
 			<key>colorindex</key>
@@ -1465,6 +1567,15 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<real>210</real>
 			<key>ypos</key>
 			<real>1380</real>
+		</dict>
+		<key>D3D67F79-D914-4C82-94F5-6452D25D83AC</key>
+		<dict>
+			<key>note</key>
+			<string>export urls</string>
+			<key>xpos</key>
+			<real>315</real>
+			<key>ypos</key>
+			<real>1025</real>
 		</dict>
 		<key>D7B09CA4-B616-4CE0-ADDF-A0E71AB9D17F</key>
 		<dict>
