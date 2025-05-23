@@ -16,7 +16,7 @@ Works with: Apple Mail ∙ Apple Finder ∙ Several browsers *(excluding Firefox
 
 ## Cool shit
 
-✅ Drop any logo .png file into the icons folder for your tagged bookmarks, based on domain urls. They'll show up as the default icon for those domains.
+✅ Drop any png file into the icons folder for your tagged bookmarks, based on domain urls. They'll show up as the default icon for those domains.
 
 ✅ Type '!' to mark tags or items as urgent ('❗'). Find them instantly too specifying '!'.
 
@@ -34,7 +34,7 @@ Easy — just press a bunch of the option keys to start saving, finding & viewin
 
 ▸ Initialize the workflow to create the underlying data file *(see below)*
 
-![image-20250509205555344](assets/image-20250509205555344.png) 
+![image-20250523070753875](assets/image-20250523070753875.png)  
 
 <kbd>↵</kbd>  Initialize the workflow
 
