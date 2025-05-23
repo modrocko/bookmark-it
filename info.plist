@@ -390,6 +390,16 @@ python3 scripts/specify_tag.py "$1"
 		</dict>
 		<dict>
 			<key>config</key>
+			<dict/>
+			<key>type</key>
+			<string>alfred.workflow.automation.task</string>
+			<key>uid</key>
+			<string>F81D2500-2E93-4858-961C-13F331006F01</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
@@ -557,9 +567,11 @@ python3 scripts/open_all_items.py "$1"</string>
 				<string>cd "$alfred_workflow_directory"
 python3 scripts/open_item.py "$1"
 
-caller="${caller}"
 
-osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\" in workflow \"com.toddsgotapen.tagit\" with argument \"$tag\""</string>
+if [ "$reprompt" = "1" ]; then
+	caller="${caller}"
+	osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\" in workflow \"com.toddsgotapen.tagit\" with argument \"$tag\""
+fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1037,7 +1049,7 @@ print(json.dumps({"items": filtered}))
 
 Tag emails, files, folders &amp; web pages for easy access later on.
 
-I created this workflow to keep related items together for certain activities — all in one place. Projects, research, orders, favorites, recipes... whatever. I mainly use this for short term stuff. Less so for long-term bookmarks. I can tag, find &amp; open email, files, folders &amp; webpages in a breeze. 
+I created this workflow to keep related items together for certain activities — all in one place. Projects, research, orders, favorites, recipes... whatever. I mainly use this for short term stuff, like the categories mentioned. But works great for long-term bookmarks too. I can tag, find &amp; open email, files, folders &amp; webpages — in a breeze. 
 
 So, to summarize... a consolidated Alfred system to:  
 
@@ -1048,6 +1060,12 @@ So, to summarize... a consolidated Alfred system to:
 Works with: Apple Mail ∙ Apple Finder ∙ Several browsers *(excluding Firefox)*
 
 ▸ Requires [jq](https://formulae.brew.sh/formula/jq)
+
+## Cool shit
+
+✅ Drop any png file into the icons folder for your tagged bookmarks, based on domain urls. They'll show up as the default icon for those domains.
+
+✅ Type '!' to mark tags or items as urgent ('❗'). Find them instantly too specifying '!'.
 
 ## Usage
 
@@ -1063,7 +1081,7 @@ Easy — just press a bunch of the option keys to start saving, finding &amp; vi
 
 ▸ Initialize the workflow to create the underlying data file *(see below)*
 
-![image-20250509205555344](assets/image-20250509205555344.png) 
+![image-20250523070753875](assets/image-20250523070753875.png)  
 
 &lt;kbd&gt;↵&lt;/kbd&gt;  Initialize the workflow
 
@@ -1343,6 +1361,13 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>ypos</key>
 			<real>210</real>
 		</dict>
+		<key>F81D2500-2E93-4858-961C-13F331006F01</key>
+		<dict>
+			<key>xpos</key>
+			<real>100</real>
+			<key>ypos</key>
+			<real>175</real>
+		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array>
@@ -1414,11 +1439,28 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>variable</key>
 			<string>tag_scope</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Enable</string>
+			</dict>
+			<key>description</key>
+			<string>Option to be reprompted after opening an item</string>
+			<key>label</key>
+			<string>Reprompt to open new item</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>reprompt</string>
+		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
-	<string>4.1.62</string>
+	<string>4.1.7</string>
 	<key>webaddress</key>
 	<string>toddsgotapen.com</string>
 </dict>
