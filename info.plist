@@ -6,29 +6,6 @@
 	<string>com.toddsgotapen.tagit</string>
 	<key>connections</key>
 	<dict>
-		<key>00D6EDE5-08E7-4738-B709-A0ADE79241FA</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>E377B8B3-9CEA-450A-81CD-E20C30495625</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>CCA2FA43-8D69-4F63-8569-B553F9C8B1F9</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string>Reset data files</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>01DC141D-19B5-49A1-8877-E3D88B065C03</key>
 		<array>
 			<dict>
@@ -179,44 +156,24 @@
 				<false/>
 			</dict>
 		</array>
-		<key>525CCC53-7746-4B83-8850-E244D8A83819</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>DAD8FDB7-DF52-47A1-B08D-6D59655C8717</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string>fuckkkcccc</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>DDEAEE87-48F2-44E7-994B-4BD6D5A32896</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string>Open the data folder</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>EF3C8FD9-0DBC-4327-B404-F37848E73C0F</string>
-				<key>modifiers</key>
-				<integer>524288</integer>
-				<key>modifiersubtext</key>
-				<string>Open the workflow folder</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>6060256D-76A0-46B7-A54D-FB318D145A96</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>62FB1192-961C-440A-975D-BEDFD1F32742</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>67E2FD15-43DD-40F7-897B-D7074874A548</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3E7A8FFA-46C1-41C2-B01F-89F099F06D56</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -266,19 +223,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>B4E0A683-D35F-4DBA-A109-839CD4358D5E</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>D3D67F79-D914-4C82-94F5-6452D25D83AC</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>B6FDE0DC-E5D0-41BB-9BBA-EF3F215DCE41</key>
 		<array>
 			<dict>
@@ -297,19 +241,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>6060256D-76A0-46B7-A54D-FB318D145A96</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>CCA2FA43-8D69-4F63-8569-B553F9C8B1F9</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>E377B8B3-9CEA-450A-81CD-E20C30495625</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -776,6 +707,21 @@ python3 scripts/list_items_for_tag.py "$1"
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>refresh_list_tags</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>9AE61FB2-0B3C-48EB-ADFD-7B296C5FE0AD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -891,21 +837,6 @@ python3 scripts/list_tags.py "$1"
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>refresh_list_tags</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>9AE61FB2-0B3C-48EB-ADFD-7B296C5FE0AD</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1005,265 +936,100 @@ osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\"
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
+				<string>cd "$alfred_workflow_directory"
+
+if [ "$1" = "open_workflow" ]; then
+	open "$alfred_workflow_directory"
+
+elif [ "$1" = "open_data" ]; then
+	open "$alfred_workflow_data"
+
+elif [ "$1" = "edit_data" ]; then
+	open "$alfred_workflow_data/items.json"
+
+else
+	python3 scripts/util_${1}.py
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3E7A8FFA-46C1-41C2-B01F-89F099F06D56</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>tagu||tu</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
 				<string>import json
-import os
-import subprocess
+import sys
 
-workflow_data = os.getenv('alfred_workflow_data')
-workflow_name = os.getenv('alfred_workflow_name', 'Tag It')
+query = sys.argv[1].lower() if len(sys.argv) &gt; 1 else ""
 
-input_path = os.path.join(workflow_data, 'items.json')
-output_path = os.path.join(workflow_data, 'bookmarks.md')
+items = [
+    {"title": "Open workflow folder", "arg": "open_workflow"},
+    {"title": "Open data folder", "arg": "open_data"},
+    {"title": "Backup data file", "arg": "backup_data"},
+    {"title": "Edit data file", "arg": "edit_data"},
+    {"title": "Export URLs", "arg": "export_urls"},
+    {"title": "Initialize workflow", "arg": "init_workflow"},
+    {"title": "Reset workflow", "arg": "reset_workflow"}
+]
 
-with open(input_path, 'r') as f:
-    data = json.load(f)
+filtered = [item for item in items if query in item["title"].lower()]
 
-with open(output_path, 'w') as f:
-    for group in data:
-        tag = group.get('tag', 'No tag')
-        bookmarks = [
-            item for item in group.get('items', [])
-            if item.get('type') == 'bookmark'
-        ]
-        if bookmarks:
-            f.write(f"## {tag}\n\n")
-            for b in bookmarks:
-                title = b.get('title', 'No title')
-                url = b.get('url', '')
-                f.write(f"- [{title}]({url})\n")
-            f.write("\n")
-
-# **Show notification**
-subprocess.run([
-    "osascript", "-e",
-    f'display notification "Exported bookmarks to bookmarks.md" with title "{workflow_name}"'
-])</string>
+print(json.dumps({"items": filtered}))
+</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
+				<key>subtext</key>
+				<string>Various utilities for this workflow</string>
+				<key>title</key>
+				<string>Run utility command</string>
 				<key>type</key>
 				<integer>9</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>D3D67F79-D914-4C82-94F5-6452D25D83AC</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>:tag export</string>
-				<key>subtext</key>
-				<string>Export urls to bookmarks.md</string>
-				<key>text</key>
-				<string>Export urls</string>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>B4E0A683-D35F-4DBA-A109-839CD4358D5E</string>
+			<string>67E2FD15-43DD-40F7-897B-D7074874A548</string>
 			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>open -a TextEdit "$alfred_workflow_data/items.json"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>DAD8FDB7-DF52-47A1-B08D-6D59655C8717</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>:tag edit</string>
-				<key>subtext</key>
-				<string>↵ Edit data file ∙ ⌘ ↵ Open data folder ∙ ⌥↵ Open workflow folder</string>
-				<key>text</key>
-				<string>Edit data files directly</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>525CCC53-7746-4B83-8850-E244D8A83819</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>import os
-import json
-import subprocess
-
-# Paths
-workflow_dir = os.environ["alfred_workflow_data"]
-items_path = os.path.join(workflow_dir, "items.json")
-title = os.environ["alfred_workflow_name"]
-
-# If already setup, skip
-if os.path.exists(items_path):
-    subprocess.run([
-        "osascript", "-e",
-        f'display notification "Setup skipped — items.json already exists." with title "{title}"'
-    ])
-    exit(0)
-
-# Create directory
-os.makedirs(workflow_dir, exist_ok=True)
-
-# Create items.json
-with open(items_path, 'w') as f:
-    json.dump([], f, indent=2)
-
-# Notify success
-subprocess.run([
-    "osascript", "-e",
-    f'display notification "Setup complete — items.json created." with title "{title}"'
-])</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>9</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>E377B8B3-9CEA-450A-81CD-E20C30495625</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>open "$alfred_workflow_data"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>DDEAEE87-48F2-44E7-994B-4BD6D5A32896</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>:tag init</string>
-				<key>subtext</key>
-				<string>↵ to intialize workflow ∙ ⌘↵ to reset data files</string>
-				<key>text</key>
-				<string>Initialize (or reset) workflow</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>00D6EDE5-08E7-4738-B709-A0ADE79241FA</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>open "$alfred_workflow_directory"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>EF3C8FD9-0DBC-4327-B404-F37848E73C0F</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>import os
-
-workflow_dir = os.environ["alfred_workflow_data"]
-items_path = os.path.join(workflow_dir, "items.json")
-
-# Delete items.json if it exists
-if os.path.exists(items_path):
-    os.remove(items_path)</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>9</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>CCA2FA43-8D69-4F63-8569-B553F9C8B1F9</string>
-			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -1356,17 +1122,6 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; Rename the item (good for applying a note too)</string>
 	<key>uidata</key>
 	<dict>
-		<key>00D6EDE5-08E7-4738-B709-A0ADE79241FA</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>8</integer>
-			<key>note</key>
-			<string>invoke init or reset</string>
-			<key>xpos</key>
-			<real>95</real>
-			<key>ypos</key>
-			<real>1210</real>
-		</dict>
 		<key>01DC141D-19B5-49A1-8877-E3D88B065C03</key>
 		<dict>
 			<key>colorindex</key>
@@ -1425,6 +1180,15 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>ypos</key>
 			<real>885</real>
 		</dict>
+		<key>3E7A8FFA-46C1-41C2-B01F-89F099F06D56</key>
+		<dict>
+			<key>note</key>
+			<string>run utils</string>
+			<key>xpos</key>
+			<real>325</real>
+			<key>ypos</key>
+			<real>925</real>
+		</dict>
 		<key>45A4A40B-A8DA-4F12-8E1C-29F192612474</key>
 		<dict>
 			<key>colorindex</key>
@@ -1450,17 +1214,6 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>ypos</key>
 			<real>315</real>
 		</dict>
-		<key>525CCC53-7746-4B83-8850-E244D8A83819</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>8</integer>
-			<key>note</key>
-			<string>invoke util</string>
-			<key>xpos</key>
-			<real>540</real>
-			<key>ypos</key>
-			<real>1210</real>
-		</dict>
 		<key>6060256D-76A0-46B7-A54D-FB318D145A96</key>
 		<dict>
 			<key>xpos</key>
@@ -1479,6 +1232,17 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>ypos</key>
 			<real>885</real>
 		</dict>
+		<key>67E2FD15-43DD-40F7-897B-D7074874A548</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>invoke utils</string>
+			<key>xpos</key>
+			<real>125</real>
+			<key>ypos</key>
+			<real>925</real>
+		</dict>
 		<key>9160BDB3-D552-4DF5-AA1B-EFA061FEFDD7</key>
 		<dict>
 			<key>colorindex</key>
@@ -1493,9 +1257,9 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<real>140</real>
+			<real>125</real>
 			<key>ypos</key>
-			<real>800</real>
+			<real>720</real>
 		</dict>
 		<key>9DC7200D-643A-4990-B761-C80BA6F83B1F</key>
 		<dict>
@@ -1530,17 +1294,6 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>ypos</key>
 			<real>70</real>
 		</dict>
-		<key>B4E0A683-D35F-4DBA-A109-839CD4358D5E</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>8</integer>
-			<key>note</key>
-			<string>invoke export urls</string>
-			<key>xpos</key>
-			<real>95</real>
-			<key>ypos</key>
-			<real>1025</real>
-		</dict>
 		<key>B6FDE0DC-E5D0-41BB-9BBA-EF3F215DCE41</key>
 		<dict>
 			<key>colorindex</key>
@@ -1559,24 +1312,6 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>ypos</key>
 			<real>885</real>
 		</dict>
-		<key>CCA2FA43-8D69-4F63-8569-B553F9C8B1F9</key>
-		<dict>
-			<key>note</key>
-			<string>run reset</string>
-			<key>xpos</key>
-			<real>210</real>
-			<key>ypos</key>
-			<real>1380</real>
-		</dict>
-		<key>D3D67F79-D914-4C82-94F5-6452D25D83AC</key>
-		<dict>
-			<key>note</key>
-			<string>export urls</string>
-			<key>xpos</key>
-			<real>315</real>
-			<key>ypos</key>
-			<real>1025</real>
-		</dict>
 		<key>D7B09CA4-B616-4CE0-ADDF-A0E71AB9D17F</key>
 		<dict>
 			<key>colorindex</key>
@@ -1588,24 +1323,6 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>ypos</key>
 			<real>225</real>
 		</dict>
-		<key>DAD8FDB7-DF52-47A1-B08D-6D59655C8717</key>
-		<dict>
-			<key>note</key>
-			<string>edit data file</string>
-			<key>xpos</key>
-			<real>760</real>
-			<key>ypos</key>
-			<real>1055</real>
-		</dict>
-		<key>DDEAEE87-48F2-44E7-994B-4BD6D5A32896</key>
-		<dict>
-			<key>note</key>
-			<string>open data folder</string>
-			<key>xpos</key>
-			<real>760</real>
-			<key>ypos</key>
-			<real>1210</real>
-		</dict>
 		<key>E04820B5-E336-4756-8181-4FE9FC938D3D</key>
 		<dict>
 			<key>colorindex</key>
@@ -1616,24 +1333,6 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<real>325</real>
 			<key>ypos</key>
 			<real>720</real>
-		</dict>
-		<key>E377B8B3-9CEA-450A-81CD-E20C30495625</key>
-		<dict>
-			<key>note</key>
-			<string>run init</string>
-			<key>xpos</key>
-			<real>315</real>
-			<key>ypos</key>
-			<real>1210</real>
-		</dict>
-		<key>EF3C8FD9-0DBC-4327-B404-F37848E73C0F</key>
-		<dict>
-			<key>note</key>
-			<string>open workflow folder</string>
-			<key>xpos</key>
-			<real>760</real>
-			<key>ypos</key>
-			<real>1370</real>
 		</dict>
 		<key>F24BFAC7-49AF-4318-A0F6-99F545366D86</key>
 		<dict>
