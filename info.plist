@@ -82,6 +82,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>14E94893-2C3C-480D-9AFF-EC5191438163</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AB8EA87B-2A2B-4380-93E1-FD740E5BE374</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>17B0DFBE-208F-414B-8DA2-B8E9D6F98289</key>
 		<array>
 			<dict>
@@ -504,6 +517,57 @@ osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\"
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>tagr||tr</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading recent...</string>
+				<key>script</key>
+				<string>cd "$alfred_workflow_directory"
+python3 scripts/list_recent_items.py "$1"
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Show recently viewed items</string>
+				<key>title</key>
+				<string>List recent items</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>14E94893-2C3C-480D-9AFF-EC5191438163</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -568,8 +632,7 @@ python3 scripts/open_all_items.py "$1"</string>
 python3 scripts/open_item.py "$1"
 
 
-if [ "$reprompt" = "1" ]; then
-	caller="${caller}"
+if [ "$reprompt" = "1" ] &amp;&amp; [ -n "$caller" ]; then
 	osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\" in workflow \"com.toddsgotapen.tagit\" with argument \"$tag\""
 fi</string>
 				<key>scriptargtype</key>
@@ -1162,6 +1225,17 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>ypos</key>
 			<real>465</real>
 		</dict>
+		<key>14E94893-2C3C-480D-9AFF-EC5191438163</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>list recent</string>
+			<key>xpos</key>
+			<real>1215</real>
+			<key>ypos</key>
+			<real>225</real>
+		</dict>
 		<key>17B0DFBE-208F-414B-8DA2-B8E9D6F98289</key>
 		<dict>
 			<key>note</key>
@@ -1203,9 +1277,9 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>note</key>
 			<string>run utils</string>
 			<key>xpos</key>
-			<real>325</real>
+			<real>1025</real>
 			<key>ypos</key>
-			<real>925</real>
+			<real>1065</real>
 		</dict>
 		<key>45A4A40B-A8DA-4F12-8E1C-29F192612474</key>
 		<dict>
@@ -1257,9 +1331,9 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<key>note</key>
 			<string>invoke utils</string>
 			<key>xpos</key>
-			<real>125</real>
+			<real>825</real>
 			<key>ypos</key>
-			<real>925</real>
+			<real>1065</real>
 		</dict>
 		<key>9160BDB3-D552-4DF5-AA1B-EFA061FEFDD7</key>
 		<dict>
@@ -1457,6 +1531,27 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 			<string>checkbox</string>
 			<key>variable</key>
 			<string>reprompt</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>12</string>
+				<key>placeholder</key>
+				<string>Set amount</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Set the number of max items to use for viewing recent items</string>
+			<key>label</key>
+			<string>Set recent amount</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>recent</string>
 		</dict>
 	</array>
 	<key>version</key>

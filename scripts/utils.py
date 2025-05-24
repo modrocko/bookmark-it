@@ -1,6 +1,7 @@
 import os
 import urllib.parse
 
+########################################
 #get the right icon based on the current browser setting
 def get_bookmark_icon():
     browser = os.environ.get("browser", "Safari")
@@ -19,6 +20,8 @@ def get_bookmark_icon():
     return icon
 
 
+
+#########################################
 #get any domain icons for a url
 _icon_cache = None
 
@@ -49,3 +52,81 @@ def get_icon(entry, fallback_icon):
 
     # Fallback icon
     return fallback_icon
+
+
+
+###################################
+#add items to the recent list/file
+def add_to_recent(entry, tag):
+    import os
+    import json
+
+    entry = dict(entry)  # make a copy
+    entry["tag"] = tag
+
+    recent_path = os.path.join(os.environ["alfred_workflow_data"], "recent.json")
+
+    try:
+        with open(recent_path) as f:
+            recent = json.load(f)
+    except FileNotFoundError:
+        recent = []
+
+    # remove duplicate if exists
+    recent = [r for r in recent if r.get("uid") != entry.get("uid")]
+
+    # insert to top
+    recent.insert(0, entry)
+
+    cap = int(os.environ.get("recent"))
+    recent = recent[:cap]
+
+    with open(recent_path, "w") as f:
+        json.dump(recent, f, indent=2)
+
+
+
+
+#######################################
+# get files for an item
+def get_item_fields(item, tag, bookmark_icon):
+    item_type = item.get("type")
+    uid = item.get("uid")
+    title = ""
+    subtitle = ""
+    path = ""
+    icon = {}
+
+    if item_type == "file":
+        path = item.get("path", "")
+        title = item.get("name") or os.path.basename(path.rstrip("/"))
+        subtitle = path
+        icon = { "path": path, "type": "fileicon" }
+
+    elif item_type == "email":
+        title = item.get("subject", "")
+        sender = item.get("sender", "")
+        date = item.get("date", "")
+        subtitle = f"{sender} • {date}"
+        message_id = item.get("id", "")
+        path = "message://" + urllib.parse.quote(f"<{message_id}>")
+        icon = { "path": "/System/Applications/Mail.app", "type": "fileicon" }
+
+    elif item_type == "bookmark":
+        title = item.get("title") or item.get("url", "")
+        url = item.get("url", "")
+        subtitle = url
+        path = url
+        icon = get_icon(item, bookmark_icon)
+
+    else:
+        return None  # skip unknown
+
+    return {
+        "item_type": item_type,
+        "uid": uid,
+        "title": title,
+        "subtitle": subtitle,
+        "path": path,
+        "icon": icon
+    }

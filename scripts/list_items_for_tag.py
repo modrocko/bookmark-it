@@ -33,42 +33,21 @@ if not block or not block.get("items"):
 
 items = []
 for entry in block["items"]:
-    item_type = entry.get("type")
-    uid = entry.get("uid", "")
-    subtitle = ""
-    title = ""
-    arg = ""
-    icon = {}
+
+    # get fields for this item
+    fields = utils.get_item_fields(entry, query_tag, bookmark_icon)
+    if not fields:
+        continue
+
+    item_type = fields["item_type"]
+    uid = fields["uid"]
+    title = fields["title"]
+    subtitle = fields["subtitle"]
+    path = fields["path"]
+    icon = fields["icon"]
 
     if filter_type and filter_type != "all" and item_type != filter_type:
         continue
-
-    if item_type == "email":
-        title = entry.get("subject", "(No Subject)")
-        sender = entry.get("sender", "")
-        date = entry.get("date", "")
-        message_id = entry.get("id", "")
-        subtitle = f"{sender} • {date}"
-        path = "message://" + urllib.parse.quote(f"<{message_id}>")
-        icon = {"path": "/System/Applications/Mail.app", "type": "fileicon"}
-
-    elif item_type == "file":
-        path = entry.get("path", "")
-        title = entry.get("name") or os.path.basename(path.rstrip("/"))
-        kind = "folder" if os.path.isdir(path) else "file"
-        subtitle = path
-        icon = { "path": path, "type": "fileicon" }
-
-
-    elif item_type == "bookmark":
-        title   = entry.get("title", entry.get("url", ""))
-        url     = entry.get("url", "")
-        subtitle= url
-        path    = url
-        icon = utils.get_icon(entry, bookmark_icon)
-
-    else:
-        continue  # Skip unknown types
 
     items.append({
         "uid": uid,

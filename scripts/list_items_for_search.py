@@ -30,53 +30,31 @@ for group in tag_groups:
     tag = group.get("tag", "")
 
     for item in group.get("items", []):
-        type_ = item.get("type", "")
-        label = ""
-        subtitle_detail = ""
-        arg = ""
-        uid = item.get("uid", "")
-        icon = {}
 
-        if type_ == "file":
-            path = item.get("path", "")
-            title = item.get("name") or os.path.basename(path.rstrip("/"))
-            label = title
-            subtitle_detail = path
-            icon = { "path": path, "type": "fileicon" }
+        # get fields for this item
+        fields = utils.get_item_fields(item, tag, bookmark_icon)
+        if not fields:
+            continue
 
-        elif type_ == "email":
-            label = item.get("subject", "")
-            sender = item.get("sender", "")
-            date = item.get("date", "")
-            subtitle_detail = f"{sender} • {date}"
-            message_id = item.get("id", "")
-            path = "message://" + urllib.parse.quote(f"<{message_id}>")
-            icon = {"path": "/System/Applications/Mail.app", "type": "fileicon"}
-
-        elif type_ == "bookmark":
-            label = item.get("title") or item.get("url", "")
-            url = item.get("url", "")
-            subtitle_detail = url
-            path = url
-            icon = utils.get_icon(item, bookmark_icon)
-
-        else:
-            continue  # skip unknown types
-
+        item_type = fields["item_type"]
+        uid = fields["uid"]
+        title = fields["title"]
+        subtitle = fields["subtitle"]
+        path = fields["path"]
+        icon = fields["icon"]
 
         # perform search
         terms = query.split()
         if not all(
-            any(term in (x or "").lower() for x in [tag, label, type_, subtitle_detail])
+            any(term in (x or "").lower() for x in [tag, title, item_type, subtitle])
             for term in terms
         ):
             continue
 
-
-        subtitle = f"[{tag}] • {subtitle_detail}"
+        subtitle = f"[{tag}] • {subtitle}"
 
         items.append({
-            "title": label,
+            "title": title,
             "subtitle": subtitle,
             "arg": path,
             "icon": icon,
@@ -95,11 +73,11 @@ for group in tag_groups:
                 },
                 "alt": {
                     "subtitle": "⌥ Rename title",
-                    "arg": label,
+                    "arg": title,
                     "variables": {
                         "tag": tag,
                         "uid": uid,
-                        "old_title": label,
+                        "old_title": title,
                         "caller": "search_tags"
                 }
               }

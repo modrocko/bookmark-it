@@ -3,13 +3,12 @@ import os
 import json
 import subprocess
 import urllib.parse
+import utils
 
-# get tag & uid from $1
-#tag, uid = sys.argv[1].strip().split("||")
-#print(f"tag={tag}\nuid={uid}", file=sys.stderr)
-
+# get tag & uid from env vars
 tag=os.environ["tag"]
 uid=os.environ["uid"]
+print(f"tag={tag}\nuid={uid}", file=sys.stderr)
 
 # load items.json
 data_path = os.path.join(os.environ["alfred_workflow_data"], "items.json")
@@ -35,3 +34,6 @@ elif item_type == "bookmark":
     url = entry.get("url", "")
     browser = os.environ.get("browser", "Safari")
     subprocess.run(["open", "-a", browser, url])
+
+# add to recent list/file
+utils.add_to_recent(entry, tag)
