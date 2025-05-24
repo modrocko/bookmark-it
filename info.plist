@@ -1136,7 +1136,7 @@ Easy — just press a bunch of the option keys to start saving, finding &amp; vi
 
 ### Main workflows
 
-![image-20250509211540846](assets/image-20250509211540846.png)  
+![tag](assets/tag.png)  
 
 ### Initialize workflow
 
@@ -1144,7 +1144,7 @@ Easy — just press a bunch of the option keys to start saving, finding &amp; vi
 
 ▸ Initialize the workflow to create the underlying data file *(see below)*
 
-![image-20250523070753875](assets/image-20250523070753875.png)  
+![tagu](assets/tagu.png)   
 
 &lt;kbd&gt;↵&lt;/kbd&gt;  Initialize the workflow
 
@@ -1154,7 +1154,7 @@ Easy — just press a bunch of the option keys to start saving, finding &amp; vi
 
 Tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or select an existing tag.
 
-![image-20250517072635828](assets/image-20250517072635828.png)   
+![tagi](assets/tagi.png)   
 
 &lt;kbd&gt;↵&lt;/kbd&gt;  Tag all selected emails in Apple Mail window
 
@@ -1166,7 +1166,7 @@ Tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or 
 
 From the previous dialog... show all tags containing items for that tag.
 
-![image-20250509221638765](assets/image-20250509221638765.png) 
+![tagl](assets/tagl.png)  
 
 &lt;kbd&gt;↵&lt;/kbd&gt;  View list of item types for this tag (emails, files &amp; tabs)
 
@@ -1176,11 +1176,11 @@ From the previous dialog... show all tags containing items for that tag.
 
 &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; View flat list all items for this tag
 
-## Show item types
+### Show item types
 
 From the previous dialog... show tagged items, grouped by item type.
 
-![image-20250511163058886](assets/image-20250511163058886.png) 
+![tagl2](assets/tagl2.png)  
 
 &lt;kbd&gt;↵&lt;/kbd&gt;  View items for that item type
 
@@ -1194,13 +1194,21 @@ From the previous dialog... show tagged items, grouped by item type.
 
 Show complete, flat list of all previously tagged items. Start typing to filter the list by title, tag, &amp; more fields.
 
- ![image-20250512152357689](assets/image-20250512152357689.png) 
+ ![tags](assets/tags.png)  
 
 &lt;kbd&gt;↵&lt;/kbd&gt;  Open the selected item
 
 &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; Remove the item (untag) from this tag
 
-&lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; Rename the item (good for applying a note too)</string>
+&lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; Rename the item (good for applying a note too)
+
+### Show recent items
+
+Show a list of the most recently opened items. Start typing to filter the list by title, tag, &amp; more fields.
+
+![tagr](assets/tagr.png)  
+
+&lt;kbd&gt;↵&lt;/kbd&gt;  Open the selected item</string>
 	<key>uidata</key>
 	<dict>
 		<key>01DC141D-19B5-49A1-8877-E3D88B065C03</key>
@@ -1555,7 +1563,7 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 		</dict>
 	</array>
 	<key>version</key>
-	<string>4.1.7</string>
+	<string>4.1.8</string>
 	<key>webaddress</key>
 	<string>toddsgotapen.com</string>
 </dict>

@@ -26,7 +26,7 @@ Easy — just press a bunch of the option keys to start saving, finding & viewin
 
 ### Main workflows
 
-![image-20250509211540846](assets/image-20250509211540846.png)  
+![tag](assets/tag.png)  
 
 ### Initialize workflow
 
@@ -34,7 +34,7 @@ Easy — just press a bunch of the option keys to start saving, finding & viewin
 
 ▸ Initialize the workflow to create the underlying data file *(see below)*
 
-![image-20250523070753875](assets/image-20250523070753875.png)  
+![tagu](assets/tagu.png)   
 
 <kbd>↵</kbd>  Initialize the workflow
 
@@ -44,7 +44,7 @@ Easy — just press a bunch of the option keys to start saving, finding & viewin
 
 Tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or select an existing tag.
 
-![image-20250517072635828](assets/image-20250517072635828.png)   
+![tagi](assets/tagi.png)   
 
 <kbd>↵</kbd>  Tag all selected emails in Apple Mail window
 
@@ -56,7 +56,7 @@ Tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or 
 
 From the previous dialog... show all tags containing items for that tag.
 
-![image-20250509221638765](assets/image-20250509221638765.png) 
+![tagl](assets/tagl.png)  
 
 <kbd>↵</kbd>  View list of item types for this tag (emails, files & tabs)
 
@@ -66,11 +66,11 @@ From the previous dialog... show all tags containing items for that tag.
 
 <kbd>⌃</kbd><kbd>↵</kbd> View flat list all items for this tag
 
-## Show item types
+### Show item types
 
 From the previous dialog... show tagged items, grouped by item type.
 
-![image-20250511163058886](assets/image-20250511163058886.png) 
+![tagl2](assets/tagl2.png)  
 
 <kbd>↵</kbd>  View items for that item type
 
@@ -84,7 +84,7 @@ From the previous dialog... show tagged items, grouped by item type.
 
 Show complete, flat list of all previously tagged items. Start typing to filter the list by title, tag, & more fields.
 
- ![image-20250512152357689](assets/image-20250512152357689.png) 
+ ![tags](assets/tags.png)  
 
 <kbd>↵</kbd>  Open the selected item
 
@@ -92,3 +92,10 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 
 <kbd>⌥</kbd><kbd>↵</kbd> Rename the item (good for applying a note too)
 
+### Show recent items
+
+Show a list of the most recently opened items. Start typing to filter the list by title, tag, & more fields.
+
+![tagr](assets/tagr.png)  
+
+<kbd>↵</kbd>  Open the selected item
