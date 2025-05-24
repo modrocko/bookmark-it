@@ -1194,7 +1194,7 @@ From the previous dialog... show tagged items, grouped by item type.
 
 Show complete, flat list of all previously tagged items. Start typing to filter the list by title, tag, &amp; more fields.
 
- ![tags](assets/tags.png)  
+![tags](assets/tags.png)  
 
 &lt;kbd&gt;↵&lt;/kbd&gt;  Open the selected item
 
@@ -1562,6 +1562,8 @@ Show a list of the most recently opened items. Start typing to filter the list b
 			<string>recent</string>
 		</dict>
 	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
 	<string>4.1.8</string>
 	<key>webaddress</key>

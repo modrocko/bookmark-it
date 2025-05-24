@@ -84,7 +84,7 @@ From the previous dialog... show tagged items, grouped by item type.
 
 Show complete, flat list of all previously tagged items. Start typing to filter the list by title, tag, & more fields.
 
- ![tags](assets/tags.png)  
+![tags](assets/tags.png)  
 
 <kbd>↵</kbd>  Open the selected item
 
