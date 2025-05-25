@@ -20,6 +20,7 @@ block = next((b for b in data if b.get("tag") == tag), {})
 entry = next((e for e in block.get("items", []) if e.get("uid") == uid), {})
 
 # decide how to open
+
 item_type = entry.get("type", "")
 if item_type == "email":
     message_id = entry.get("id", "")

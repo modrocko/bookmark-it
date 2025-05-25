@@ -57,10 +57,10 @@ for entry in recent:
 # No results fallback
 if not items:
     items = [{
-        "title": "No matches found",
-        "subtitle": "Try a different search",
+        "title": "Nothing here yet",
+        "subtitle": "But there will be soon 🤪",
         "valid": False,
-        "icon": { "path": "icons/info.png" }
+        "icon": { "path": "info.png" }
     }]
 
 print(json.dumps({ "items": items }))

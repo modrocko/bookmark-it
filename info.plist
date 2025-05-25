@@ -403,16 +403,6 @@ python3 scripts/specify_tag.py "$1"
 		</dict>
 		<dict>
 			<key>config</key>
-			<dict/>
-			<key>type</key>
-			<string>alfred.workflow.automation.task</string>
-			<key>uid</key>
-			<string>F81D2500-2E93-4858-961C-13F331006F01</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
@@ -513,57 +503,6 @@ osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\"
 			<string>D7B09CA4-B616-4CE0-ADDF-A0E71AB9D17F</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>tagr||tr</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Loading recent...</string>
-				<key>script</key>
-				<string>cd "$alfred_workflow_directory"
-python3 scripts/list_recent_items.py "$1"
-</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Show recently viewed items</string>
-				<key>title</key>
-				<string>List recent items</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>14E94893-2C3C-480D-9AFF-EC5191438163</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -986,6 +925,57 @@ osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\"
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>tagr||tr</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading recent...</string>
+				<key>script</key>
+				<string>cd "$alfred_workflow_directory"
+python3 scripts/list_recent_items.py "$1"
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Show recently viewed items</string>
+				<key>title</key>
+				<string>List recent items</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>14E94893-2C3C-480D-9AFF-EC5191438163</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>{var:tag}||{var:uid}||{var:old_title}||{query}</string>
 				<key>passthroughargument</key>
@@ -1240,9 +1230,9 @@ Show a list of the most recently opened items. Start typing to filter the list b
 			<key>note</key>
 			<string>list recent</string>
 			<key>xpos</key>
-			<real>1215</real>
+			<real>325</real>
 			<key>ypos</key>
-			<real>225</real>
+			<real>905</real>
 		</dict>
 		<key>17B0DFBE-208F-414B-8DA2-B8E9D6F98289</key>
 		<dict>
@@ -1285,9 +1275,9 @@ Show a list of the most recently opened items. Start typing to filter the list b
 			<key>note</key>
 			<string>run utils</string>
 			<key>xpos</key>
-			<real>1025</real>
+			<real>810</real>
 			<key>ypos</key>
-			<real>1065</real>
+			<real>1085</real>
 		</dict>
 		<key>45A4A40B-A8DA-4F12-8E1C-29F192612474</key>
 		<dict>
@@ -1317,7 +1307,7 @@ Show a list of the most recently opened items. Start typing to filter the list b
 		<key>6060256D-76A0-46B7-A54D-FB318D145A96</key>
 		<dict>
 			<key>xpos</key>
-			<real>1195</real>
+			<real>1210</real>
 			<key>ypos</key>
 			<real>915</real>
 		</dict>
@@ -1328,7 +1318,7 @@ Show a list of the most recently opened items. Start typing to filter the list b
 			<key>note</key>
 			<string>rename title</string>
 			<key>xpos</key>
-			<real>1270</real>
+			<real>1285</real>
 			<key>ypos</key>
 			<real>885</real>
 		</dict>
@@ -1339,9 +1329,9 @@ Show a list of the most recently opened items. Start typing to filter the list b
 			<key>note</key>
 			<string>invoke utils</string>
 			<key>xpos</key>
-			<real>825</real>
+			<real>325</real>
 			<key>ypos</key>
-			<real>1065</real>
+			<real>1085</real>
 		</dict>
 		<key>9160BDB3-D552-4DF5-AA1B-EFA061FEFDD7</key>
 		<dict>
@@ -1368,7 +1358,7 @@ Show a list of the most recently opened items. Start typing to filter the list b
 			<key>note</key>
 			<string>rename tag</string>
 			<key>xpos</key>
-			<real>1035</real>
+			<real>1045</real>
 			<key>ypos</key>
 			<real>720</real>
 		</dict>
@@ -1392,7 +1382,7 @@ Show a list of the most recently opened items. Start typing to filter the list b
 			<key>xpos</key>
 			<real>325</real>
 			<key>ypos</key>
-			<real>70</real>
+			<real>55</real>
 		</dict>
 		<key>B6FDE0DC-E5D0-41BB-9BBA-EF3F215DCE41</key>
 		<dict>
@@ -1408,7 +1398,7 @@ Show a list of the most recently opened items. Start typing to filter the list b
 			<key>note</key>
 			<string>rename title prompt</string>
 			<key>xpos</key>
-			<real>1035</real>
+			<real>1045</real>
 			<key>ypos</key>
 			<real>885</real>
 		</dict>
@@ -1442,13 +1432,6 @@ Show a list of the most recently opened items. Start typing to filter the list b
 			<real>805</real>
 			<key>ypos</key>
 			<real>210</real>
-		</dict>
-		<key>F81D2500-2E93-4858-961C-13F331006F01</key>
-		<dict>
-			<key>xpos</key>
-			<real>100</real>
-			<key>ypos</key>
-			<real>175</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>

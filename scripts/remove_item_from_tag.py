@@ -8,7 +8,7 @@ print(f"TAG: {tag}\nUID: {uid}", file=sys.stderr)
 
 workflow_dir = os.environ["alfred_workflow_data"]
 items_path = os.path.join(workflow_dir, "items.json")
-notif_title = os.environ.get("alfred_workflow_name", "Tags")
+notif_title = os.environ.get("alfred_workflow_name")
 
 if not os.path.exists(items_path):
     sys.exit(0)
