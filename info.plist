@@ -1120,6 +1120,8 @@ Works with: Apple Mail ∙ Apple Finder ∙ Several browsers *(excluding Firefox
 
 ✅ Type '!' to mark tags or items as urgent ('❗'). Find them instantly too specifying '!'.
 
+✅ Set some other useful features in `Configure Workflow`.
+
 ## Usage
 
 Easy — just press a bunch of the option keys to start saving, finding &amp; viewing emails, files, folders &amp; browser tabs. 
@@ -1545,8 +1547,6 @@ Show a list of the most recently opened items. Start typing to filter the list b
 			<string>recent</string>
 		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
 	<string>4.1.8</string>
 	<key>webaddress</key>

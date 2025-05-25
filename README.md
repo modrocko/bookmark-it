@@ -20,6 +20,8 @@ Works with: Apple Mail ∙ Apple Finder ∙ Several browsers *(excluding Firefox
 
 ✅ Type '!' to mark tags or items as urgent ('❗'). Find them instantly too specifying '!'.
 
+✅ Set some other useful features in `Configure Workflow`.
+
 ## Usage
 
 Easy — just press a bunch of the option keys to start saving, finding & viewing emails, files, folders & browser tabs. 
