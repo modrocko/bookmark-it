@@ -54,7 +54,7 @@ Tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or 
 
 <kbd>⌥</kbd><kbd>↵</kbd> Tag all browser tabs as per preference setting
 
-### Show tagged items
+### List tagged items
 
 From the previous dialog... show all tags containing items for that tag.
 
@@ -68,7 +68,7 @@ From the previous dialog... show all tags containing items for that tag.
 
 <kbd>⌃</kbd><kbd>↵</kbd> View flat list all items for this tag
 
-### Show item types
+### List item types
 
 From the previous dialog... show tagged items, grouped by item type.
 
