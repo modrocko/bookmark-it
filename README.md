@@ -97,18 +97,16 @@ For example,
 
 All `dropbox.com` tagged urls will now display `dropbox.png` as the default icon.
 
+Build your icon library over time — no hurries.
+
 ### Supported Symbols
 
-You can type simple text or symbols, and they’ll convert automatically *(for tagging and searching)*:
+See the latest symbols supported for tagging & searching items.
 
-`!`         → ❗   Important  
-`?`         → ❓   Needs clarity  
-`*`         → ⭐   Starred  
-`$`         → 💰   Financial  
-`:chk`  → ✅   Complete  
-`>`         → 📌   Follow-up  
-`~`         → 🌀   In Progress
+![tagsy](assets/tagsy.png)  
 
 ### More Configurations
 
 Set other useful features in `Configure Workflow`.
+
+![config](assets/config.png)  

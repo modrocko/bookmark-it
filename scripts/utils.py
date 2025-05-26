@@ -134,14 +134,18 @@ def get_item_fields(item, tag, bookmark_icon):
 
 
 ####################################
-# replace typed symbols
-def normalize_symbols(text):
-    return (
-        text.replace("!", "❗")
-            .replace("?", "❓")
-            .replace("*", "⭐")
-            .replace("$", "💰")
-            .replace(":chk", "✅")
-            .replace(">", "📌")
-    )
+# support symbols for tagging & searching
+symbol_map = {
+    "!": "❗",
+    "?": "❓",
+    "*": "⭐",
+    "$": "💰",
+    "%": "✅",
+    ">": "📌",
+    "~": "🌀"
+}
 
+def normalize_symbols(text):
+    for k, v in symbol_map.items():
+        text = text.replace(k, v)
+    return text

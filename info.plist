@@ -1096,6 +1096,57 @@ print(json.dumps({"items": filtered}))
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:tag_symbols}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>cd "$alfred_workflow_directory"
+python3 scripts/show_symbols.py "$1"
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Tag &amp; search using these supported symbols</string>
+				<key>title</key>
+				<string>Show supported symbols</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>6C70932C-0CC0-4714-9E1F-B557FF813FE0</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string># Tag It!
@@ -1197,21 +1248,19 @@ For example,
 
 All `dropbox.com` tagged urls will now display `dropbox.png` as the default icon.
 
+Build your icon library over time — no hurries.
+
 ### Supported Symbols
 
-You can type simple text or symbols, and they’ll convert automatically *(for tagging and searching)*:
+See the latest symbols supported for tagging &amp; searching items.
 
-`!`         → ❗   Important  
-`?`         → ❓   Needs clarity  
-`*`         → ⭐   Starred  
-`$`         → 💰   Financial  
-`:chk`  → ✅   Complete  
-`&gt;`         → 📌   Follow-up  
-`~`         → 🌀   In Progress
+![tagsy](assets/tagsy.png)  
 
 ### More Configurations
 
-Set other useful features in `Configure Workflow`.</string>
+Set other useful features in `Configure Workflow`.
+
+![config](assets/config.png)</string>
 	<key>uidata</key>
 	<dict>
 		<key>01DC141D-19B5-49A1-8877-E3D88B065C03</key>
@@ -1345,6 +1394,17 @@ Set other useful features in `Configure Workflow`.</string>
 			<real>325</real>
 			<key>ypos</key>
 			<real>1085</real>
+		</dict>
+		<key>6C70932C-0CC0-4714-9E1F-B557FF813FE0</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>show supported symbols</string>
+			<key>xpos</key>
+			<real>330</real>
+			<key>ypos</key>
+			<real>1255</real>
 		</dict>
 		<key>9160BDB3-D552-4DF5-AA1B-EFA061FEFDD7</key>
 		<dict>
@@ -1662,11 +1722,32 @@ Set other useful features in `Configure Workflow`.</string>
 			<key>variable</key>
 			<string>tag_utils</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>tag sy</string>
+				<key>placeholder</key>
+				<string>tag sy</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Show the symbols that can be used to tag &amp; search for tagged items</string>
+			<key>label</key>
+			<string>Show supported symbols</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>tag_symbols</string>
+		</dict>
 	</array>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>5.1.1</string>
+	<string>5.1.2</string>
 	<key>webaddress</key>
 	<string>toddsgotapen.com</string>
 </dict>

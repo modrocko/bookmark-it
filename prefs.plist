@@ -12,6 +12,8 @@
 	<string>tagr||tr</string>
 	<key>tag_search</key>
 	<string>tags||ts</string>
+	<key>tag_symbols</key>
+	<string>tagsy||tsy</string>
 	<key>tag_utils</key>
 	<string>tagu||tu</string>
 </dict>
