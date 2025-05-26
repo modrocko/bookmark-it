@@ -30,21 +30,9 @@ Easy — just press a bunch of the option keys to start saving, finding & viewin
 
 ![tag](assets/tag.png)  
 
-### Initialize workflow
-
-▸ In *Configure Workflow*: 1) Select browser preference ∙ 2) Select tagging preference for browser window(s)
-
-▸ Initialize the workflow to create the underlying data file *(see below)*
-
-![tagu](assets/tagu.png)   
-
-<kbd>↵</kbd>  Initialize the workflow
-
-<kbd>⌘</kbd><kbd>↵</kbd> Reset data files (destructive action, will delete all existing data)
-
 ### Tag something
 
-Tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or select an existing tag.
+To get started... tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or select an existing tag.
 
 ![tagi](assets/tagi.png)   
 
@@ -101,3 +89,13 @@ Show a list of the most recently opened items. Start typing to filter the list b
 ![tagr](assets/tagr.png)  
 
 <kbd>↵</kbd>  Open the selected item
+
+### Run a utility command
+
+Some useful commands to do some maintenance or move around this workflow
+
+![tagu](assets/tagu.png)   
+
+Choose the command to run. 
+
+*Note:* `Reset workflow` *will remove all data to start over.*

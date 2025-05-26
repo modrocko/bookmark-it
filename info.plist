@@ -1068,7 +1068,7 @@ items = [
     {"title": "Backup data file", "arg": "backup_data"},
     {"title": "Edit data file", "arg": "edit_data"},
     {"title": "Export URLs", "arg": "export_urls"},
-    {"title": "Initialize workflow", "arg": "init_workflow"},
+    #{"title": "Initialize workflow", "arg": "init_workflow"},
     {"title": "Reset workflow", "arg": "reset_workflow"}
 ]
 
@@ -1130,21 +1130,9 @@ Easy — just press a bunch of the option keys to start saving, finding &amp; vi
 
 ![tag](assets/tag.png)  
 
-### Initialize workflow
-
-▸ In *Configure Workflow*: 1) Select browser preference ∙ 2) Select tagging preference for browser window(s)
-
-▸ Initialize the workflow to create the underlying data file *(see below)*
-
-![tagu](assets/tagu.png)   
-
-&lt;kbd&gt;↵&lt;/kbd&gt;  Initialize the workflow
-
-&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; Reset data files (destructive action, will delete all existing data)
-
 ### Tag something
 
-Tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or select an existing tag.
+To get started... tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or select an existing tag.
 
 ![tagi](assets/tagi.png)   
 
@@ -1200,7 +1188,17 @@ Show a list of the most recently opened items. Start typing to filter the list b
 
 ![tagr](assets/tagr.png)  
 
-&lt;kbd&gt;↵&lt;/kbd&gt;  Open the selected item</string>
+&lt;kbd&gt;↵&lt;/kbd&gt;  Open the selected item
+
+### Run a utility command
+
+Some useful commands to do some maintenance or move around this workflow
+
+![tagu](assets/tagu.png)   
+
+Choose the command to run. 
+
+*Note:* `Reset workflow` *will remove all data to start over.*</string>
 	<key>uidata</key>
 	<dict>
 		<key>01DC141D-19B5-49A1-8877-E3D88B065C03</key>
@@ -1547,6 +1545,8 @@ Show a list of the most recently opened items. Start typing to filter the list b
 			<string>recent</string>
 		</dict>
 	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
 	<string>4.1.8</string>
 	<key>webaddress</key>
