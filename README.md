@@ -97,7 +97,7 @@ For example,
 
 All `dropbox.com` tagged urls will now display `dropbox.png` as the default icon.
 
-Build your icon library over time — no hurries.
+I provided a few starter icons for you. Then build your icon library over time.
 
 ### Supported Symbols
 
