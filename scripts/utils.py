@@ -1,5 +1,6 @@
 import os
 import urllib.parse
+import json
 
 ########################################
 #get the right icon based on the current browser setting
@@ -58,8 +59,6 @@ def get_icon(entry, fallback_icon):
 ###################################
 #add items to the recent list/file
 def add_to_recent(entry, tag):
-    import os
-    import json
 
     entry = dict(entry)  # make a copy
     entry["tag"] = tag
@@ -130,3 +129,19 @@ def get_item_fields(item, tag, bookmark_icon):
         "path": path,
         "icon": icon
     }
+
+
+
+
+####################################
+# replace typed symbols
+def normalize_symbols(text):
+    return (
+        text.replace("!", "❗")
+            .replace("?", "❓")
+            .replace("*", "⭐")
+            .replace("$", "💰")
+            .replace(":chk", "✅")
+            .replace(">", "📌")
+    )
+

@@ -3,9 +3,10 @@ import sys
 import json
 import subprocess
 import uuid
+import utils
 
 # Get tag
-tag = sys.argv[1].strip().replace("!", "❗")
+tag = utils.normalize_symbols(sys.argv[1].strip())
 if not tag:
     sys.exit(0)
 

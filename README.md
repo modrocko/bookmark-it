@@ -6,14 +6,6 @@ Works with: `Apple Mail` ∙ `Apple Finder` ∙ `Chrome, Brave, Safari, Arc & Ed
 
 ▸ Requires [jq](https://formulae.brew.sh/formula/jq)
 
-## Tips
-
-✅ Drop any png file into the icons folder for your tagged bookmarks — based on domain urls. For example, 1) Search the web for the Dropbox logo file. 2) Name it `dropbox.png`. 3) Place it in the `/icons` folder in your `workflow folder`. All `dropbox.com` tagged urls will now display `dropbox.png` as the default icon.
-
-✅ Type `!` to mark tags or items as urgent `❗`. Find them instantly searching for `!`.
-
-✅ Set other useful features in `Configure Workflow`.
-
 ## Usage
 
 ### Main workflows
@@ -89,3 +81,34 @@ Some useful commands to do some maintenance or move around this workflow
 Choose the command to run. 
 
 *Note:* `Reset workflow` *will remove all data to start over.*
+
+---
+
+## Tips
+
+### Domain Icons
+
+Drop any png file into the icons folder for your tagged bookmarks — based on domain urls. 
+
+For example,  
+(1) Search the web for the Dropbox logo file  
+(2) Name it `dropbox.png`  
+(3) Place it in the `/icons` folder in your `workflow folder`  
+
+All `dropbox.com` tagged urls will now display `dropbox.png` as the default icon.
+
+### Supported Symbols
+
+You can type simple text or symbols, and they’ll convert automatically *(for tagging and searching)*:
+
+`!`         → ❗   Important  
+`?`         → ❓   Needs clarity  
+`*`         → ⭐   Starred  
+`$`         → 💰   Financial  
+`:chk`  → ✅   Complete  
+`>`         → 📌   Follow-up  
+`~`         → 🌀   In Progress
+
+### More Configurations
+
+Set other useful features in `Configure Workflow`.

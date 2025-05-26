@@ -2,9 +2,10 @@ import os
 import sys
 import json
 import subprocess
+import utils
 
 # split single arg into parts
-tag, uid, old_title, new_title = sys.argv[1].replace("!", "❗").split("||")
+tag, uid, old_title, new_title = [utils.normalize_symbols(x) for x in sys.argv[1].split("||")]
 
 print(f"tag={tag}\nuid={uid}\nold_title={old_title}\nnew_title={new_title}", file=sys.stderr)
 

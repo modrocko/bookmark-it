@@ -2,9 +2,11 @@ import os
 import sys
 import json
 import subprocess
+import utils
 
 # Get tag from input
-tag = sys.argv[1].strip().replace("!", "❗")
+tag = utils.normalize_symbols(sys.argv[1].strip())
+
 if not tag:
     print("No tag provided")
     sys.exit(1)

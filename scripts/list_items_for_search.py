@@ -4,7 +4,8 @@ import json
 import urllib.parse
 import utils
 
-query = sys.argv[1].strip().replace("!", "❗").lower() if len(sys.argv) > 1 else ""
+query = utils.normalize_symbols(sys.argv[1].strip().lower()) if len(sys.argv) > 1 else ""
+
 print(f"QUERY: {query}", file=sys.stderr)
 
 workflow_dir = os.environ["alfred_workflow_data"]

@@ -2,11 +2,12 @@ import os
 import sys
 import json
 import subprocess
+import utils
 
 # Get args
 raw = sys.argv[1].strip()
 try:
-    tag, item_id, item_type = [x.strip().replace("!", "❗") for x in raw.split("||")]
+    tag, item_id, item_type = [utils.normalize_symbols(x.strip()) for x in raw.split("||")]
 except:
     print("Invalid input format")
     sys.exit(1)

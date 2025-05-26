@@ -1,9 +1,9 @@
 import os
 import json
 import sys
+import utils
 
-query = sys.argv[1].lower() if len(sys.argv) > 1 else ""
-query = query.replace("!", "❗")
+query = utils.normalize_symbols(sys.argv[1].lower()) if len(sys.argv) > 1 else ""
 
 workflow_dir = os.environ["alfred_workflow_data"]
 items_path = os.path.join(workflow_dir, "items.json")

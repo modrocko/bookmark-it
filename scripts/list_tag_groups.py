@@ -1,9 +1,9 @@
 import os
 import sys
 import json
-from utils import get_bookmark_icon
+import utils
 
-query_tag = sys.argv[1].strip().replace("!", "❗")
+query_tag = utils.normalize_symbols(sys.argv[1].strip())
 
 workflow_dir = os.environ["alfred_workflow_data"]
 items_path = os.path.join(workflow_dir, "items.json")
@@ -55,7 +55,7 @@ labels = {
 
 icons = {
   "email": { "path": "/System/Applications/Mail.app", "type": "fileicon"},
-  "bookmark": get_bookmark_icon(),
+  "bookmark": utils.get_bookmark_icon(),
   "file": { "path": "/System/Library/CoreServices/Finder.app", "type": "fileicon" }
 }
 

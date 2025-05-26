@@ -2,6 +2,7 @@ import os
 import sys
 import json
 import subprocess
+import utils
 
 # Get and split input
 arg = sys.argv[1].strip()
@@ -11,7 +12,7 @@ if "||" not in arg:
 
 old_tag, new_tag = arg.split("||", 1)
 old_tag = old_tag.strip()
-new_tag = new_tag.strip().replace("!", "❗")
+new_tag = utils.normalize_symbols(new_tag.strip())
 
 # Skip if no change
 if not old_tag or not new_tag or old_tag == new_tag:

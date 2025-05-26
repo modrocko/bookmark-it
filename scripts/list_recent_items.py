@@ -4,23 +4,45 @@ import json
 import urllib.parse
 import utils
 
-query = sys.argv[1].strip().replace("!", "❗").lower() if len(sys.argv) > 1 else ""
+query = utils.normalize_symbols(sys.argv[1].strip().lower()) if len(sys.argv) > 1 else ""
+terms = query.split()
 
 workflow_data = os.environ["alfred_workflow_data"]
 recent_path = os.path.join(workflow_data, "recent.json")
+items_path = os.path.join(workflow_data, "items.json")
 
+# Load recent.json
 try:
     with open(recent_path) as f:
         recent = json.load(f)
 except FileNotFoundError:
     recent = []
 
+# Load items.json
+try:
+    with open(items_path) as f:
+        tag_groups = json.load(f)
+except FileNotFoundError:
+    tag_groups = []
+
+# Build set of valid uids
+valid_uids = {
+    item["uid"]
+    for group in tag_groups
+    for item in group.get("items", [])
+}
+
 items = []
+updated_recent = []
 
 bookmark_icon = utils.get_bookmark_icon()
 
 for entry in recent:
+    uid = entry.get("uid")
     tag = entry.get("tag", "")
+
+    if uid not in valid_uids:
+        continue  # skip if item no longer exists
 
     # get fields for this item
     fields = utils.get_item_fields(entry, tag, bookmark_icon)
@@ -28,14 +50,13 @@ for entry in recent:
         continue
 
     item_type = fields["item_type"]
-    uid = fields["uid"]
     title = fields["title"]
     subtitle = fields["subtitle"]
     path = fields["path"]
     icon = fields["icon"]
 
-    terms = query.split()
-    if not all(
+    # apply filtering
+    if terms and not all(
         any(term in (x or "").lower() for x in [tag, title, item_type, subtitle])
         for term in terms
     ):
@@ -54,6 +75,12 @@ for entry in recent:
         }
     })
 
+    updated_recent.append(entry)  # keep valid item in recent.json
+
+# Overwrite recent.json with only valid entries
+with open(recent_path, "w") as f:
+    json.dump(updated_recent, f, indent=2)
+
 # No results fallback
 if not items:
     items = [{
@@ -64,3 +91,4 @@ if not items:
     }]
 
 print(json.dumps({ "items": items }))
+

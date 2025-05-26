@@ -3,9 +3,10 @@ import sys
 import json
 import subprocess
 import urllib.parse
+import utils
 
 # Args
-tag, item_type = [x.strip().replace("!", "❗") for x in sys.argv[1].split("||")]
+tag, item_type = [utils.normalize_symbols(x.strip()) for x in sys.argv[1].split("||")]
 
 # Paths
 workflow_dir = os.environ["alfred_workflow_data"]

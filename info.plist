@@ -366,7 +366,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
-				<string>tagi||ti</string>
+				<string>{var:tag_it}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -604,7 +604,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>tags||ts</string>
+				<string>{var:tag_search}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -775,7 +775,7 @@ osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_list_tags\"
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>tagl||tl</string>
+				<string>{var:tag_list}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -938,7 +938,7 @@ osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\"
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>tagr||tr</string>
+				<string>{var:tag_recent}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1045,7 +1045,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>tagu||tu</string>
+				<string>{var:tag_utils}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1105,14 +1105,6 @@ Tag emails, files, folders &amp; web pages for easy access later on. Easily mana
 Works with: `Apple Mail` ∙ `Apple Finder` ∙ `Chrome, Brave, Safari, Arc &amp; Edge Browsers`
 
 ▸ Requires [jq](https://formulae.brew.sh/formula/jq)
-
-## Tips
-
-✅ Drop any png file into the icons folder for your tagged bookmarks — based on domain urls. For example, 1) Search the web for the Dropbox logo file. 2) Name it `dropbox.png`. 3) Place it in the `/icons` folder in your `workflow folder`. All `dropbox.com` tagged urls will now display `dropbox.png` as the default icon.
-
-✅ Type `!` to mark tags or items as urgent `❗`. Find them instantly searching for `!`.
-
-✅ Set other useful features in `Configure Workflow`.
 
 ## Usage
 
@@ -1188,7 +1180,38 @@ Some useful commands to do some maintenance or move around this workflow
 
 Choose the command to run. 
 
-*Note:* `Reset workflow` *will remove all data to start over.*</string>
+*Note:* `Reset workflow` *will remove all data to start over.*
+
+---
+
+## Tips
+
+### Domain Icons
+
+Drop any png file into the icons folder for your tagged bookmarks — based on domain urls. 
+
+For example,  
+(1) Search the web for the Dropbox logo file  
+(2) Name it `dropbox.png`  
+(3) Place it in the `/icons` folder in your `workflow folder`  
+
+All `dropbox.com` tagged urls will now display `dropbox.png` as the default icon.
+
+### Supported Symbols
+
+You can type simple text or symbols, and they’ll convert automatically *(for tagging and searching)*:
+
+`!`         → ❗   Important  
+`?`         → ❓   Needs clarity  
+`*`         → ⭐   Starred  
+`$`         → 💰   Financial  
+`:chk`  → ✅   Complete  
+`&gt;`         → 📌   Follow-up  
+`~`         → 🌀   In Progress
+
+### More Configurations
+
+Set other useful features in `Configure Workflow`.</string>
 	<key>uidata</key>
 	<dict>
 		<key>01DC141D-19B5-49A1-8877-E3D88B065C03</key>
@@ -1534,9 +1557,116 @@ Choose the command to run.
 			<key>variable</key>
 			<string>recent</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>tag it</string>
+				<key>placeholder</key>
+				<string>tag it</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Tag an email file, folder or webpage</string>
+			<key>label</key>
+			<string>Tag something!</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>tag_it</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>tag list</string>
+				<key>placeholder</key>
+				<string>tag list</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Show (list) items grouped by tag</string>
+			<key>label</key>
+			<string>List tagged items</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>tag_list</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>tag search</string>
+				<key>placeholder</key>
+				<string>tag search</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Search through a list of all tagged items by title, name, type &amp; more</string>
+			<key>label</key>
+			<string>Search tags</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>tag_search</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>tag recent</string>
+				<key>placeholder</key>
+				<string>tag recent</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Show items opened recently when using this workflow</string>
+			<key>label</key>
+			<string>Show recently opended items</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>tag_recent</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>tag utils</string>
+				<key>placeholder</key>
+				<string>tag utils</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Show utilities command to see data or folders</string>
+			<key>label</key>
+			<string>Show utilities command</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>tag_utils</string>
+		</dict>
 	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>4.1.8</string>
+	<string>5.1.1</string>
 	<key>webaddress</key>
 	<string>toddsgotapen.com</string>
 </dict>
