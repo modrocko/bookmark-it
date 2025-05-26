@@ -1,36 +1,26 @@
 # Tag It!
 
-Tag emails, files, folders & web pages for easy access later on.
+Tag emails, files, folders & web pages for easy access later on. Easily manage your work projects, research, web orders, recipes... whatever. 
 
-I created this workflow to keep related items together for certain activities — all in one place. Projects, research, orders, favorites, recipes... whatever. I mainly use this for short term stuff, like the categories mentioned. But works great for long-term bookmarks too. I can tag, find & open email, files, folders & webpages — in a breeze. 
-
-So, to summarize... a consolidated Alfred system to:  
-
-✓  Keep your projects organized  
-✓  Keep your work moving forward  
-✓  Keep your brain sane
-
-Works with: Apple Mail ∙ Apple Finder ∙ Several browsers *(excluding Firefox)*
+Works with: `Apple Mail` ∙ `Apple Finder` ∙ `Chrome, Brave, Safari, Arc & Edge Browsers`
 
 ▸ Requires [jq](https://formulae.brew.sh/formula/jq)
 
-## Cool shit
+## Tips
 
-✅ Drop any png file into the icons folder for your tagged bookmarks, based on domain urls. They'll show up as the default icon for those domains.
+✅ Drop any png file into the icons folder for your tagged bookmarks — based on domain urls. For example, 1) Search the web for the Dropbox logo file. 2) Name it `dropbox.png`. 3) Place it in the `/icons` folder in your `workflow folder`. All `dropbox.com` tagged urls will now display `dropbox.png` as the default icon.
 
-✅ Type '!' to mark tags or items as urgent ('❗'). Find them instantly too specifying '!'.
+✅ Type `!` to mark tags or items as urgent `❗`. Find them instantly searching for `!`.
 
-✅ Set some other useful features in `Configure Workflow`.
+✅ Set other useful features in `Configure Workflow`.
 
 ## Usage
-
-Easy — just press a bunch of the option keys to start saving, finding & viewing emails, files, folders & browser tabs. 
 
 ### Main workflows
 
 ![tag](assets/tag.png)  
 
-### Tag something
+### Tag It!
 
 To get started... tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or select an existing tag.
 
