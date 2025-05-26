@@ -1705,9 +1705,9 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>tag utils</string>
+				<string>:tag utils</string>
 				<key>placeholder</key>
-				<string>tag utils</string>
+				<string>:tag utils</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
@@ -1726,9 +1726,9 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>tag sy</string>
+				<string>:tag sy</string>
 				<key>placeholder</key>
-				<string>tag sy</string>
+				<string>:tag sy</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
@@ -1744,8 +1744,6 @@ Set other useful features in `Configure Workflow`.
 			<string>tag_symbols</string>
 		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
 	<string>5.1.2</string>
 	<key>webaddress</key>
