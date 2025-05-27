@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.toddsgotapen.tagit</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>01DC141D-19B5-49A1-8877-E3D88B065C03</key>
