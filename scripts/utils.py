@@ -134,18 +134,14 @@ def get_item_fields(item, tag, bookmark_icon):
 
 
 ####################################
-# support symbols for tagging & searching
-symbol_map = {
-    "!": "❗",
-    "?": "❓",
-    "*": "⭐",
-    "$": "💰",
-    "%": "✅",
-    ">": "📌",
-    "~": "🌀"
-}
+# load symbol map from Alfred workflow variable
+raw = os.environ.get("symbols", "{}")
+symbol_map_raw = json.loads(raw)
+
+# Extract just the emoji part
+symbol_map = {k: v.split(":", 1)[0].strip() for k, v in symbol_map_raw.items()}
 
 def normalize_symbols(text):
-    for k, v in symbol_map.items():
-        text = text.replace(k, v)
+    for k, emoji in symbol_map.items():
+        text = text.replace(k, emoji)
     return text

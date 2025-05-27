@@ -1569,7 +1569,7 @@ Set other useful features in `Configure Workflow`.
 				</array>
 			</dict>
 			<key>description</key>
-			<string>Select how this workflow should tag browser tabs</string>
+			<string>Select how this workflow should tag browser tabs. Add new symbols or change key for existing ones. Consider keys like this too ':chk'.</string>
 			<key>label</key>
 			<string>Select tagging for browser tabs</string>
 			<key>type</key>
@@ -1743,11 +1743,40 @@ Set other useful features in `Configure Workflow`.
 			<key>variable</key>
 			<string>tag_symbols</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>{
+  "!": "❗ : Important",
+  "?": "❓ : Needs clarity",
+  "*": "⭐ : Starred",
+  "$": "💰 : Financial",
+  "%": "✅ : Complete",
+  "&gt;": "📌 : Follow-up",
+  "~": "🌀 : In Progress"
+}</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+				<key>verticalsize</key>
+				<integer>9</integer>
+			</dict>
+			<key>description</key>
+			<string>Use symbols to tag &amp; search for items. Add new symbols or change keys for existing ones. Keys like this works too ':chk'.</string>
+			<key>label</key>
+			<string>Choose your symbols and/or keys</string>
+			<key>type</key>
+			<string>textarea</string>
+			<key>variable</key>
+			<string>symbols</string>
+		</dict>
 	</array>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>5.1.3</string>
+	<string>5.1.4</string>
 	<key>webaddress</key>
 	<string>toddsgotapen.com</string>
 </dict>
