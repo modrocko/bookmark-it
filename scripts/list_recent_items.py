@@ -34,7 +34,6 @@ valid_uids = {
 
 items = []
 updated_recent = []
-
 bookmark_icon = utils.get_bookmark_icon()
 
 for entry in recent:
@@ -42,9 +41,22 @@ for entry in recent:
     tag = entry.get("tag", "")
 
     if uid not in valid_uids:
-        continue  # skip if item no longer exists
+        continue  # ❌ Skip if item no longer exists
 
-    # get fields for this item
+    ############################
+    #skip the file type if it no longeer exists on disk
+
+    fields = utils.get_item_fields(entry, tag, bookmark_icon)
+    if not fields:
+        continue
+
+    # ❌ Skip file items if the file is gone
+    if fields["item_type"] == "file" and not os.path.exists(fields["path"]):
+        continue
+    ############################
+
+    updated_recent.append(entry)  # ✅ Keep all valid entries (entries that also exising in main data file)
+
     fields = utils.get_item_fields(entry, tag, bookmark_icon)
     if not fields:
         continue
@@ -55,7 +67,6 @@ for entry in recent:
     path = fields["path"]
     icon = fields["icon"]
 
-    # apply filtering
     if terms and not all(
         any(term in (x or "").lower() for x in [tag, title, item_type, subtitle])
         for term in terms
@@ -75,13 +86,11 @@ for entry in recent:
         }
     })
 
-    updated_recent.append(entry)  # keep valid item in recent.json
-
-# Overwrite recent.json with only valid entries
+# Save only valid entries back to recent.json
 with open(recent_path, "w") as f:
     json.dump(updated_recent, f, indent=2)
 
-# No results fallback
+# Fallback message
 if not items:
     items = [{
         "title": "Nothing here yet",
@@ -91,4 +100,3 @@ if not items:
     }]
 
 print(json.dumps({ "items": items }))
-

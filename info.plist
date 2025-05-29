@@ -1127,7 +1127,7 @@ print(json.dumps({"items": filtered}))
 				<string></string>
 				<key>script</key>
 				<string>cd "$alfred_workflow_directory"
-python3 scripts/show_symbols.py "$1"
+python3 scripts/util_show_symbols.py "$1"
 </string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1778,7 +1778,7 @@ Set other useful features in `Configure Workflow`.
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>5.1.4</string>
+	<string>5.1.5</string>
 	<key>webaddress</key>
 	<string>toddsgotapen.com</string>
 </dict>
