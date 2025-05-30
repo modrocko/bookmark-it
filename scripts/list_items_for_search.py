@@ -18,12 +18,13 @@ if not os.path.exists(items_path):
 with open(items_path, "r") as f:
     tag_groups = json.load(f)
 
-items = [{
-    "title": "Keyboard shortcuts",
-    "subtitle": "↵ Open • ⌘ Remove item • ⌥ Rename title",
-    "valid": False,
-    "icon": { "path": "info.png" }
-}]
+items = [{}]
+#items = [{
+#    "title": "Keyboard shortcuts",
+#    "subtitle": "↵ Open • ⌘ Remove item • ⌥ Rename title",
+#    "valid": False,
+#    "icon": { "path": "info.png" }
+#}]
 
 bookmark_icon = utils.get_bookmark_icon()
 

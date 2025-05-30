@@ -1071,7 +1071,7 @@ items = [
     {"title": "Edit data file", "arg": "edit_data"},
     {"title": "Export URLs", "arg": "export_urls"},
     #{"title": "Initialize workflow", "arg": "init_workflow"},
-    {"title": "Reset workflow", "arg": "reset_workflow"}
+    {"title": "Reset workflow (volitile ❗)", "arg": "reset_workflow"}
 ]
 
 filtered = [item for item in items if query in item["title"].lower()]
@@ -1754,9 +1754,13 @@ Set other useful features in `Configure Workflow`.
   "?": "❓ : Needs clarity",
   "*": "⭐ : Starred",
   "$": "💰 : Financial",
-  "%": "✅ : Complete",
-  "&gt;": "📌 : Follow-up",
-  "~": "🌀 : In Progress"
+  ":chk": "✅ : Complete",
+  ":pin": "📌 : Follow-up",
+  ":prog": "🌀 : In Progress",
+  ":pause": "⏸️ : Pause",
+  ":red": "🔴 : Red",
+  ":grn": "🟢 : Green",
+  ":yel": "🟡 : Yellow"
 }</string>
 				<key>required</key>
 				<false/>
@@ -1766,7 +1770,7 @@ Set other useful features in `Configure Workflow`.
 				<integer>9</integer>
 			</dict>
 			<key>description</key>
-			<string>Use symbols to tag &amp; search for items. Add new symbols or change keys for existing ones. Keys like this works too ':chk'.</string>
+			<string>Use symbols to tag &amp; search for items. Add new symbols or change keys for existing ones.</string>
 			<key>label</key>
 			<string>Choose your symbols and/or keys</string>
 			<key>type</key>
@@ -1775,8 +1779,6 @@ Set other useful features in `Configure Workflow`.
 			<string>symbols</string>
 		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
 	<string>5.1.5</string>
 	<key>webaddress</key>

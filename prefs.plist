@@ -4,22 +4,6 @@
 <dict>
 	<key>browser</key>
 	<string>Brave Browser</string>
-	<key>reprompt</key>
-	<true/>
-	<key>symbols</key>
-	<string>{
-  "!": "❗ : Important",
-  "?": "❓ : Needs clarity",
-  "*": "⭐ : Starred",
-  "$": "💰 : Financial",
-  ":chk": "✅ : Complete",
-  ":pin": "📌 : Follow-up",
-  ":prog": "🌀 : In Progress",
-  ":pause": "⏸️ : Pause",
-  ":red": "🔴 : Red",
-  ":grn": "🟢 : Green",
-  ":yel": "🟡 : Yellow"
-}</string>
 	<key>tag_it</key>
 	<string>tagi||ti</string>
 	<key>tag_list</key>
@@ -28,5 +12,9 @@
 	<string>tagr||tr</string>
 	<key>tag_search</key>
 	<string>tags||ts</string>
+	<key>tag_symbols</key>
+	<string>:tags</string>
+	<key>tag_utils</key>
+	<string>:tagu</string>
 </dict>
 </plist>
