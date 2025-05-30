@@ -1,6 +1,6 @@
 # Tag It!
 
-Tag emails, files, folders & web pages for easy access later on. Easily manage your work projects, research, web orders, recipes... whatever. 
+Tag emails, files, folders & web pages for easy access later on via Alfred. Easily manage your work projects, research, web orders, recipes... whatever. 
 
 Works with: `Apple Mail` ∙ `Apple Finder` ∙ `Chrome, Brave, Safari, Arc & Edge Browsers`
 
@@ -92,7 +92,7 @@ Drop any png file into the icons folder for your tagged bookmarks — based on d
 
 For example,  
 (1) Search the web for the Dropbox logo file  
-(2) Name it `dropbox.png`  
+(2) Download & name it `dropbox.png`  
 (3) Place it in the `/icons` folder in your `workflow folder`  
 
 All `dropbox.com` tagged urls will now display `dropbox.png` as the default icon.
@@ -101,7 +101,7 @@ I provided a few starter icons for you. Then build your icon library over time.
 
 ### Supported Symbols
 
-See the latest symbols supported for tagging & searching items.
+See the latest symbols supported for tagging & searching items. These are great to add to your tags or items. Add more in the `Configure Workflow` section.
 
 ![tagsy](assets/tagsy.png)  
 
