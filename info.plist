@@ -1750,14 +1750,14 @@ Set other useful features in `Configure Workflow`.
 			<dict>
 				<key>default</key>
 				<string>{
-  "!": "❗ : Important",
-  "?": "❓ : Needs clarity",
-  "*": "⭐ : Starred",
-  "$": "💰 : Financial",
+  "!"   : "❗ : Important",
+  "?"   : "❓ : Needs clarity",
+  "*"   : "⭐ : Starred",
+  "$"   : "💰 : Financial",
   ":chk": "✅ : Complete",
   ":pin": "📌 : Follow-up",
-  ":prog": "🌀 : In Progress",
-  ":pause": "⏸️ : Pause",
+  ":prg": "🌀 : In Progress",
+  ":pau": "⏸️ : Pause",
   ":red": "🔴 : Red",
   ":grn": "🟢 : Green",
   ":yel": "🟡 : Yellow"
