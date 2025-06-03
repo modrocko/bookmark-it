@@ -1071,7 +1071,7 @@ items = [
     {"title": "Edit data file", "arg": "edit_data"},
     {"title": "Export URLs", "arg": "export_urls"},
     #{"title": "Initialize workflow", "arg": "init_workflow"},
-    {"title": "Reset workflow (volitile ❗)", "arg": "reset_workflow"}
+    #{"title": "Reset workflow (volitile ❗)", "arg": "reset_workflow"}
 ]
 
 filtered = [item for item in items if query in item["title"].lower()]
@@ -1750,14 +1750,13 @@ Set other useful features in `Configure Workflow`.
 			<dict>
 				<key>default</key>
 				<string>{
-  "!"   : "❗ : Important",
-  "?"   : "❓ : Needs clarity",
-  "*"   : "⭐ : Starred",
-  "$"   : "💰 : Financial",
+  ":!"  : "❗ : Important",
+  ":?"  : "❓ : Needs clarity",
+  ":*"  : "⭐ : Starred",
+  ":x"  : "❌ : No-go",
   ":chk": "✅ : Complete",
   ":pin": "📌 : Follow-up",
   ":prg": "🌀 : In Progress",
-  ":pau": "⏸️ : Pause",
   ":red": "🔴 : Red",
   ":grn": "🟢 : Green",
   ":yel": "🟡 : Yellow"
