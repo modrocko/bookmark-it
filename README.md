@@ -6,6 +6,8 @@ Works with: `Apple Mail` ∙ `Apple Finder` ∙ `Chrome, Brave, Safari, Arc & Ed
 
 ▸ Requires [jq](https://formulae.brew.sh/formula/jq)
 
+> *Check out Tag It!'s brother workflow, [Restore It!](https://github.com/modrocko/restore-it)*
+
 ## Usage
 
 ### Main workflows
