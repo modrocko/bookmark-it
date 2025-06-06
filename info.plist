@@ -1623,9 +1623,9 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>tag it</string>
+				<string>tagi</string>
 				<key>placeholder</key>
-				<string>tag it</string>
+				<string>tagi</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
@@ -1644,9 +1644,9 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>tag list</string>
+				<string>tagl</string>
 				<key>placeholder</key>
-				<string>tag list</string>
+				<string>tagl</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
@@ -1665,9 +1665,9 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>tag search</string>
+				<string>tags</string>
 				<key>placeholder</key>
-				<string>tag search</string>
+				<string>tags</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
@@ -1686,9 +1686,9 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>tag recent</string>
+				<string>tagr</string>
 				<key>placeholder</key>
-				<string>tag recent</string>
+				<string>tagr</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
@@ -1707,9 +1707,9 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>:tag utils</string>
+				<string>:tagu</string>
 				<key>placeholder</key>
-				<string>:tag utils</string>
+				<string>:tagu</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
@@ -1728,9 +1728,9 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>:tag sy</string>
+				<string>:tags</string>
 				<key>placeholder</key>
-				<string>:tag sy</string>
+				<string>:tags</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
@@ -1753,6 +1753,7 @@ Set other useful features in `Configure Workflow`.
   ":!"  : "❗ : Important",
   ":?"  : "❓ : Needs clarity",
   ":*"  : "⭐ : Starred",
+  ":w"  : "⌛ : Waiting",
   ":x"  : "❌ : No-go",
   ":chk": "✅ : Complete",
   ":pin": "📌 : Follow-up",
