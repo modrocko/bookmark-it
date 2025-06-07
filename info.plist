@@ -1779,8 +1779,10 @@ Set other useful features in `Configure Workflow`.
 			<string>symbols</string>
 		</dict>
 	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>5.1.5</string>
+	<string>5.1.6</string>
 	<key>webaddress</key>
 	<string>toddsgotapen.com</string>
 </dict>
