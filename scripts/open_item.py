@@ -33,7 +33,7 @@ elif item_type == "file":
 
 elif item_type == "bookmark":
     url = entry.get("url", "")
-    browser = os.environ.get("browser", "Safari")
+    browser = os.environ.get("browser")
     subprocess.run(["open", "-a", browser, url])
 
 # add to recent list/file

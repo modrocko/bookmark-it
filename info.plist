@@ -12,6 +12,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>D4326868-0C2E-4709-AEF5-4ED7063D0FD3</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>3B79DBBE-65FB-4838-A630-7F460CFF70DA</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
@@ -324,6 +334,30 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>cd "$alfred_workflow_directory"
+python3 scripts/open_all_items.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D4326868-0C2E-4709-AEF5-4ED7063D0FD3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
 				<string>cd "$alfred_workflow_directory"
@@ -546,7 +580,7 @@ osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\"
 				<integer>68</integer>
 				<key>script</key>
 				<string>cd "$alfred_workflow_directory"
-python3 scripts/open_all_items.py "$1"</string>
+python3 scripts/open_items.py "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1274,7 +1308,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>515</real>
 			<key>ypos</key>
-			<real>210</real>
+			<real>320</real>
 		</dict>
 		<key>0C11029C-6EA0-4F3A-B2DA-445D04A38860</key>
 		<dict>
@@ -1285,7 +1319,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>325</real>
 			<key>ypos</key>
-			<real>465</real>
+			<real>575</real>
 		</dict>
 		<key>14E94893-2C3C-480D-9AFF-EC5191438163</key>
 		<dict>
@@ -1296,7 +1330,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>325</real>
 			<key>ypos</key>
-			<real>905</real>
+			<real>1015</real>
 		</dict>
 		<key>17B0DFBE-208F-414B-8DA2-B8E9D6F98289</key>
 		<dict>
@@ -1305,16 +1339,16 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>810</real>
 			<key>ypos</key>
-			<real>720</real>
+			<real>830</real>
 		</dict>
 		<key>2E049BF0-4133-41C3-A115-1294AA5E009B</key>
 		<dict>
 			<key>note</key>
-			<string>open all items</string>
+			<string>open items</string>
 			<key>xpos</key>
 			<real>805</real>
 			<key>ypos</key>
-			<real>365</real>
+			<real>475</real>
 		</dict>
 		<key>3B79DBBE-65FB-4838-A630-7F460CFF70DA</key>
 		<dict>
@@ -1323,7 +1357,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>805</real>
 			<key>ypos</key>
-			<real>55</real>
+			<real>165</real>
 		</dict>
 		<key>3C035299-D7E6-452D-985C-BD510CAF8859</key>
 		<dict>
@@ -1332,7 +1366,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>810</real>
 			<key>ypos</key>
-			<real>885</real>
+			<real>995</real>
 		</dict>
 		<key>3E7A8FFA-46C1-41C2-B01F-89F099F06D56</key>
 		<dict>
@@ -1341,7 +1375,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>810</real>
 			<key>ypos</key>
-			<real>1085</real>
+			<real>1195</real>
 		</dict>
 		<key>45A4A40B-A8DA-4F12-8E1C-29F192612474</key>
 		<dict>
@@ -1352,28 +1386,28 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>805</real>
 			<key>ypos</key>
-			<real>540</real>
+			<real>650</real>
 		</dict>
 		<key>4C6184CB-F717-480D-86DD-6050571026A3</key>
 		<dict>
 			<key>xpos</key>
 			<real>965</real>
 			<key>ypos</key>
-			<real>750</real>
+			<real>860</real>
 		</dict>
 		<key>51100120-8934-4147-8F61-66981D1FE39B</key>
 		<dict>
 			<key>xpos</key>
 			<real>135</real>
 			<key>ypos</key>
-			<real>315</real>
+			<real>425</real>
 		</dict>
 		<key>6060256D-76A0-46B7-A54D-FB318D145A96</key>
 		<dict>
 			<key>xpos</key>
 			<real>1210</real>
 			<key>ypos</key>
-			<real>915</real>
+			<real>1025</real>
 		</dict>
 		<key>62FB1192-961C-440A-975D-BEDFD1F32742</key>
 		<dict>
@@ -1384,7 +1418,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>1285</real>
 			<key>ypos</key>
-			<real>885</real>
+			<real>995</real>
 		</dict>
 		<key>67E2FD15-43DD-40F7-897B-D7074874A548</key>
 		<dict>
@@ -1395,7 +1429,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>325</real>
 			<key>ypos</key>
-			<real>1085</real>
+			<real>1195</real>
 		</dict>
 		<key>6C70932C-0CC0-4714-9E1F-B557FF813FE0</key>
 		<dict>
@@ -1406,7 +1440,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>330</real>
 			<key>ypos</key>
-			<real>1255</real>
+			<real>1365</real>
 		</dict>
 		<key>9160BDB3-D552-4DF5-AA1B-EFA061FEFDD7</key>
 		<dict>
@@ -1415,7 +1449,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>135</real>
 			<key>ypos</key>
-			<real>465</real>
+			<real>575</real>
 		</dict>
 		<key>9AE61FB2-0B3C-48EB-ADFD-7B296C5FE0AD</key>
 		<dict>
@@ -1424,7 +1458,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>125</real>
 			<key>ypos</key>
-			<real>720</real>
+			<real>830</real>
 		</dict>
 		<key>9DC7200D-643A-4990-B761-C80BA6F83B1F</key>
 		<dict>
@@ -1435,7 +1469,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>1045</real>
 			<key>ypos</key>
-			<real>720</real>
+			<real>830</real>
 		</dict>
 		<key>AB8EA87B-2A2B-4380-93E1-FD740E5BE374</key>
 		<dict>
@@ -1446,7 +1480,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>1045</real>
 			<key>ypos</key>
-			<real>445</real>
+			<real>555</real>
 		</dict>
 		<key>B112702C-80D1-4A60-B2D9-3308685B8B1B</key>
 		<dict>
@@ -1457,7 +1491,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>325</real>
 			<key>ypos</key>
-			<real>55</real>
+			<real>165</real>
 		</dict>
 		<key>B6FDE0DC-E5D0-41BB-9BBA-EF3F215DCE41</key>
 		<dict>
@@ -1466,7 +1500,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>510</real>
 			<key>ypos</key>
-			<real>535</real>
+			<real>645</real>
 		</dict>
 		<key>C14E5E27-20CC-4702-9CDF-02F93BE30AA9</key>
 		<dict>
@@ -1475,7 +1509,16 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>1045</real>
 			<key>ypos</key>
-			<real>885</real>
+			<real>995</real>
+		</dict>
+		<key>D4326868-0C2E-4709-AEF5-4ED7063D0FD3</key>
+		<dict>
+			<key>note</key>
+			<string>open all items</string>
+			<key>xpos</key>
+			<real>805</real>
+			<key>ypos</key>
+			<real>15</real>
 		</dict>
 		<key>D7B09CA4-B616-4CE0-ADDF-A0E71AB9D17F</key>
 		<dict>
@@ -1486,7 +1529,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>1045</real>
 			<key>ypos</key>
-			<real>225</real>
+			<real>335</real>
 		</dict>
 		<key>E04820B5-E336-4756-8181-4FE9FC938D3D</key>
 		<dict>
@@ -1497,7 +1540,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>325</real>
 			<key>ypos</key>
-			<real>720</real>
+			<real>830</real>
 		</dict>
 		<key>F24BFAC7-49AF-4318-A0F6-99F545366D86</key>
 		<dict>
@@ -1506,7 +1549,7 @@ Set other useful features in `Configure Workflow`.
 			<key>xpos</key>
 			<real>805</real>
 			<key>ypos</key>
-			<real>210</real>
+			<real>320</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -1782,7 +1825,7 @@ Set other useful features in `Configure Workflow`.
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>5.1.6</string>
+	<string>5.1.7</string>
 	<key>webaddress</key>
 	<string>toddsgotapen.com</string>
 </dict>

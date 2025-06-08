@@ -37,12 +37,19 @@ for item in block["items"]:
 # Build output list
 items = []
 items.append({
-    "title": "View all items",
-    "subtitle": f"{query_tag}",
+    "title": "View / Open items",
+    "subtitle": f"↵ View all items ∙ ⇧ Open all items",
     "arg": query_tag,
     "variables": {
         "item_type": "all",
         "tag": query_tag
+    },
+    "mods": {
+        "shift": {
+            "subtitle": "⇧ Open all items",
+            "arg": f"{query_tag}",
+            "variables": {}
+        }
     }
 })
 
