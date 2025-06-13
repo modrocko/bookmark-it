@@ -56,7 +56,9 @@ for group in tag_groups:
         subtitle = f"[{tag}] • {subtitle}"
 
         #override icon is special tag is specified
-        icon = utils.get_icon_for_tag(title, subtitle)
+        custom_icon = utils.get_icon_for_tag(title, subtitle)
+        if custom_icon != "":
+            icon = custom_icon
 
         items.append({
             "title": title,

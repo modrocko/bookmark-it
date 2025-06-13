@@ -140,8 +140,6 @@ def get_item_fields(item, tag, bookmark_icon):
 
 #######################################
 # get the icon based on it's specific tag
-import os
-
 def get_icon_for_tag(*strings):
     tag_icons = {
         "@urgent": "urgent.png",
