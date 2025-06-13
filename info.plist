@@ -546,17 +546,19 @@ osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_${caller}\"
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
-				<integer>0</integer>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>@quick-notes</string>
 				<key>focusedappvariable</key>
 				<false/>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>17</integer>
+				<integer>12</integer>
 				<key>hotmod</key>
 				<integer>262144</integer>
 				<key>hotstring</key>
-				<string>T</string>
+				<string>Q</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>

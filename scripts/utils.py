@@ -102,6 +102,10 @@ def get_item_fields(item, tag, bookmark_icon):
         subtitle = path
         icon = { "path": path, "type": "fileicon" }
 
+        if "@notes" in title:
+            icon = { "path": "notes.png" }
+
+
     elif item_type == "email":
         title = item.get("subject", "")
         sender = item.get("sender", "")
