@@ -42,11 +42,15 @@ for block in data:
 
     subtitle = f"[{', '.join(type_labels)}] • ↵ View tag(s) • ⌘ Rename tag • ⌥ Remove tag • ⌃ View items"
 
+    #override icon is special tag is specified
+    icon = utils.get_icon_for_tag(tag)
+
     if query in tag.lower():
         items.append({
             "title": tag,
             "subtitle": subtitle,
             "arg": tag,
+            "icon": icon,
             "mods": {
                 "cmd": {
                     "subtitle": "⌘ Rename tag",

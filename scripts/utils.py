@@ -102,9 +102,10 @@ def get_item_fields(item, tag, bookmark_icon):
         subtitle = path
         icon = { "path": path, "type": "fileicon" }
 
-        if "@notes" in title:
-            icon = { "path": "notes.png" }
-
+#        if "@notes" in title:
+#            icon = { "path": "notes.png" }
+#
+#        icon = get_icon_for_tag(title)
 
     elif item_type == "email":
         title = item.get("subject", "")
@@ -133,6 +134,31 @@ def get_item_fields(item, tag, bookmark_icon):
         "path": path,
         "icon": icon
     }
+
+
+
+
+#######################################
+# get the icon based on it's specific tag
+import os
+
+def get_icon_for_tag(*strings):
+    tag_icons = {
+        "@urgent": "urgent.png",
+        "@waiting": "waiting.png",
+        "@ping": "ping.png",
+        "@notes": "notes.png"
+    }
+
+    for string in strings:
+        if not isinstance(string, str):
+            continue
+        for keyword, filename in tag_icons.items():
+            if keyword in string:
+                icon_path = os.path.join(os.path.dirname(__file__), "..", filename)
+                return { "path": os.path.abspath(icon_path) }
+
+    return ""
 
 
 

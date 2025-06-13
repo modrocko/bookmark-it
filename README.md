@@ -101,11 +101,13 @@ All `dropbox.com` tagged urls will now display `dropbox.png` as the default icon
 
 I provided a few starter icons for you. Then build your icon library over time.
 
-### Notes icon
+### Tag icons
 
-Got a file tagged for a project that represent notes for that project? Add the tag `@notes` to any file item to have it stand out with a notes icon.
+Specify these tags: `@urgent` `@waiting` `@ping` `@notes` — see icons like these for your tags & items:
 
-![notes](assets/notes.png) 
+![](assets/tag-icons.png) 
+
+*More icons coming...*
 
 ### Supported Symbols
 
