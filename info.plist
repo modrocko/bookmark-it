@@ -1834,7 +1834,7 @@ Set other useful features in `Configure Workflow`.
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>5.2.0</string>
+	<string>5.2.1</string>
 	<key>webaddress</key>
 	<string>toddsgotapen.com</string>
 </dict>

@@ -3,7 +3,8 @@ import json
 import sys
 import utils
 
-query = utils.normalize_symbols(sys.argv[1].lower()) if len(sys.argv) > 1 else ""
+query_raw = sys.argv[1] if len(sys.argv) > 1 else ""
+query = utils.normalize_symbols(query_raw.lower()) if query_raw and query_raw != "(null)" else ""
 
 workflow_dir = os.environ["alfred_workflow_data"]
 items_path = os.path.join(workflow_dir, "items.json")
@@ -45,30 +46,34 @@ for block in data:
     #override icon is special tag is specified
     icon = utils.get_icon_for_tag(tag)
 
-    if query in tag.lower():
-        items.append({
-            "title": tag,
-            "subtitle": subtitle,
-            "arg": tag,
-            "icon": icon,
-            "mods": {
-                "cmd": {
-                    "subtitle": "⌘ Rename tag",
-                    "arg": tag,
-                    "variables": {
-                        "old_tag": tag
-                    }
-                },
-                "alt": {
-                    "subtitle": "⌥ Remove tag",
-                    "arg": tag
-                },
-                "ctrl": {
-                    "subtitle": "⌃ View items",
-                    "arg": tag
+    # perform search
+    terms = query.split()
+    if query and not all(term in tag.lower() for term in terms):
+        continue
+
+    items.append({
+        "title": tag,
+        "subtitle": subtitle,
+        "arg": tag,
+        "icon": icon,
+        "mods": {
+            "cmd": {
+                "subtitle": "⌘ Rename tag",
+                "arg": tag,
+                "variables": {
+                    "old_tag": tag
                 }
+            },
+            "alt": {
+                "subtitle": "⌥ Remove tag",
+                "arg": tag
+            },
+            "ctrl": {
+                "subtitle": "⌃ View items",
+                "arg": tag
             }
-        })
+        }
+    })
 
 # If no items matched, show fallback
 if not items:
