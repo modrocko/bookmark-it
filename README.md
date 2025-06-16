@@ -1,4 +1,4 @@
-# Tag It!
+# Bookmark It!
 
 Tag emails, files, folders & web pages for easy access later on via Alfred. Easily manage your work projects, research, web orders, recipes... whatever. 
 
