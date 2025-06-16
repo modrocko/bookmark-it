@@ -1,24 +1,24 @@
-# Tag It!
+# Bookmark It!
 
-Tag emails, files, folders & web pages for easy access later on via Alfred. Easily manage your work projects, research, web orders, recipes... whatever. 
+Bookmark emails, files & web pages for easy access later on via Alfred. Easily manage your work projects, research, web orders, recipes... whatever. 
 
 Works with: `Apple Mail` ∙ `Apple Finder` ∙ `Chrome, Brave, Safari, Arc & Edge Browsers`
 
 ▸ Requires [jq](https://formulae.brew.sh/formula/jq)
 
-> *Check out Tag It!'s brother workflow, [Restore It!](https://github.com/modrocko/restore-it)*
+> *Check out Bookmark It!'s brother workflow, [Restore It!](https://github.com/modrocko/restore-it)*
 
 ## Usage
 
 ### Main workflows
 
-![tag](assets/tag.png)  
+![tag](assets/tag.png) 
 
-### Tag It!
+ Tag It!
 
 To get started... tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or select an existing tag.
 
-![tagi](assets/tagi.png)   
+![tagi](assets/tagi.png)    
 
 <kbd>↵</kbd>  Tag all selected emails in Apple Mail window
 
@@ -30,7 +30,7 @@ To get started... tag emails, files, folders or browser tabs. Keep typing to cre
 
 From the previous dialog... show all tags containing items for that tag.
 
-![tagl](assets/tagl.png)  
+![tagl](assets/tagl.png)   
 
 <kbd>↵</kbd>  View list of item types for this tag (emails, files & tabs)
 
@@ -44,7 +44,7 @@ From the previous dialog... show all tags containing items for that tag.
 
 From the previous dialog... show tagged items, grouped by item type.
 
-![tagl2](assets/tagl2.png)  
+![tagl2](assets/tagl2.png)    
 
 <kbd>↵</kbd>  View items for that item type
 
@@ -58,7 +58,7 @@ From the previous dialog... show tagged items, grouped by item type.
 
 Show complete, flat list of all previously tagged items. Start typing to filter the list by title, tag, & more fields.
 
-![tags](assets/tags.png)  
+![tags](assets/tags.png)   
 
 <kbd>↵</kbd>  Open the selected item
 
@@ -78,7 +78,7 @@ Show a list of the most recently opened items. Start typing to filter the list b
 
 Some useful commands to do some maintenance or move around this workflow
 
-![tagu](assets/tagu.png)   
+![tagu](assets/tagu.png) 
 
 Choose the command to run. 
 
@@ -113,10 +113,11 @@ Specify these tags: `@urgent` `@waiting` `@ping` `@notes` — see icons like the
 
 See the latest symbols supported for tagging & searching items. These are great to add to your tags or items. Add more in the `Configure Workflow` section.
 
-![tagsy](assets/tagsy.png)  
+![tagsy](assets/tagsy.png) 
 
 ### More Configurations
 
 Set other useful features in `Configure Workflow`.
 
-![config](assets/config.png)  
+![config](assets/config.png)
+

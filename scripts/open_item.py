@@ -31,7 +31,7 @@ elif item_type == "file":
     path = entry.get("path", "")
     subprocess.run(["open", path])
 
-elif item_type == "bookmark":
+elif item_type == "webpage":
     url = entry.get("url", "")
     browser = os.environ.get("browser")
     subprocess.run(["open", "-a", browser, url])

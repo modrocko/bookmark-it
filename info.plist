@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.toddsgotapen.tagit</string>
+	<string>com.toddsgotapen.bookmarkit</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -321,11 +321,11 @@
 	<key>createdby</key>
 	<string>Todd Clarke</string>
 	<key>description</key>
-	<string>Tag emails, files &amp; webpages for easy access</string>
+	<string>Bookmark emails, files &amp; webpages for easy access</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Tag It!</string>
+	<string>Bookmark It!</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -366,7 +366,7 @@ if [ "$item_type" = "email" ]; then
   python3 scripts/tag_emails.py "$1"
 elif [ "$item_type" = "file" ]; then
   python3 scripts/tag_files.py "$1"
-elif [ "$item_type" = "bookmark" ]; then
+elif [ "$item_type" = "webpage" ]; then
   python3 scripts/tag_tabs.py "$1"
 else
   echo "Unknown item_type: $item_type" &gt;&amp;2
@@ -422,9 +422,9 @@ python3 scripts/specify_tag.py "$1"
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Tag emails, browser tabs or files</string>
+				<string>Bookmark emails, webpages &amp; files</string>
 				<key>title</key>
-				<string>Tag something!</string>
+				<string>Bookmark something!</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -664,7 +664,7 @@ python3 scripts/list_items_for_search.py "$1"
 				<key>subtext</key>
 				<string>Search all items by their key attributes</string>
 				<key>title</key>
-				<string>Search tagged items</string>
+				<string>Search bookmarked items</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -833,9 +833,9 @@ python3 scripts/list_tags.py "$1"
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Show tagged items grouped by tag</string>
+				<string>Show tagged items grouped by bookmarks</string>
 				<key>title</key>
-				<string>List tagged items</string>
+				<string>List bookmarked items</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -1187,27 +1187,27 @@ python3 scripts/util_show_symbols.py "$1"
 		</dict>
 	</array>
 	<key>readme</key>
-	<string># Tag It!
+	<string># Bookmark It!
 
-Tag emails, files, folders &amp; web pages for easy access later on via Alfred. Easily manage your work projects, research, web orders, recipes... whatever. 
+Bookmark emails, files &amp; web pages for easy access later on via Alfred. Easily manage your work projects, research, web orders, recipes... whatever. 
 
 Works with: `Apple Mail` ∙ `Apple Finder` ∙ `Chrome, Brave, Safari, Arc &amp; Edge Browsers`
 
 ▸ Requires [jq](https://formulae.brew.sh/formula/jq)
 
-&gt; *Check out Tag It!'s brother workflow, [Restore It!](https://github.com/modrocko/restore-it)*
+&gt; *Check out Bookmark It!'s brother workflow, [Restore It!](https://github.com/modrocko/restore-it)*
 
 ## Usage
 
 ### Main workflows
 
-![tag](assets/tag.png)  
+![tag](assets/tag.png) 
 
-### Tag It!
+ Tag It!
 
 To get started... tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or select an existing tag.
 
-![tagi](assets/tagi.png)   
+![tagi](assets/tagi.png)    
 
 &lt;kbd&gt;↵&lt;/kbd&gt;  Tag all selected emails in Apple Mail window
 
@@ -1219,7 +1219,7 @@ To get started... tag emails, files, folders or browser tabs. Keep typing to cre
 
 From the previous dialog... show all tags containing items for that tag.
 
-![tagl](assets/tagl.png)  
+![tagl](assets/tagl.png)   
 
 &lt;kbd&gt;↵&lt;/kbd&gt;  View list of item types for this tag (emails, files &amp; tabs)
 
@@ -1233,7 +1233,7 @@ From the previous dialog... show all tags containing items for that tag.
 
 From the previous dialog... show tagged items, grouped by item type.
 
-![tagl2](assets/tagl2.png)  
+![tagl2](assets/tagl2.png)    
 
 &lt;kbd&gt;↵&lt;/kbd&gt;  View items for that item type
 
@@ -1247,7 +1247,7 @@ From the previous dialog... show tagged items, grouped by item type.
 
 Show complete, flat list of all previously tagged items. Start typing to filter the list by title, tag, &amp; more fields.
 
-![tags](assets/tags.png)  
+![tags](assets/tags.png)   
 
 &lt;kbd&gt;↵&lt;/kbd&gt;  Open the selected item
 
@@ -1267,7 +1267,7 @@ Show a list of the most recently opened items. Start typing to filter the list b
 
 Some useful commands to do some maintenance or move around this workflow
 
-![tagu](assets/tagu.png)   
+![tagu](assets/tagu.png) 
 
 Choose the command to run. 
 
@@ -1302,7 +1302,7 @@ Specify these tags: `@urgent` `@waiting` `@ping` `@notes` — see icons like the
 
 See the latest symbols supported for tagging &amp; searching items. These are great to add to your tags or items. Add more in the `Configure Workflow` section.
 
-![tagsy](assets/tagsy.png)  
+![tagsy](assets/tagsy.png) 
 
 ### More Configurations
 
@@ -1678,18 +1678,18 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>tagi</string>
+				<string>bkmi</string>
 				<key>placeholder</key>
-				<string>tagi</string>
+				<string>bkmi</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Tag an email file, folder or webpage</string>
+			<string>Bookmark an email file, folder or webpage</string>
 			<key>label</key>
-			<string>Tag something!</string>
+			<string>Bookmark something!</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -1699,16 +1699,16 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>tagl</string>
+				<string>bkml</string>
 				<key>placeholder</key>
-				<string>tagl</string>
+				<string>bkml</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Show (list) items grouped by tag</string>
+			<string>Show (list) items grouped by bookmarks</string>
 			<key>label</key>
 			<string>List tagged items</string>
 			<key>type</key>
@@ -1720,18 +1720,18 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>tags</string>
+				<string>bkms</string>
 				<key>placeholder</key>
-				<string>tags</string>
+				<string>bkms</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Search through a list of all tagged items by title, name, type &amp; more</string>
+			<string>Search through a list of all bookamrked items by title, name, type &amp; more</string>
 			<key>label</key>
-			<string>Search tags</string>
+			<string>Search bookarks</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -1741,9 +1741,9 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>tagr</string>
+				<string>bkmr</string>
 				<key>placeholder</key>
-				<string>tagr</string>
+				<string>bkmr</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
@@ -1762,9 +1762,9 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>:tagu</string>
+				<string>:bkmu</string>
 				<key>placeholder</key>
-				<string>:tagu</string>
+				<string>:bkmu</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
@@ -1783,9 +1783,9 @@ Set other useful features in `Configure Workflow`.
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>:tags</string>
+				<string>:bkms</string>
 				<key>placeholder</key>
-				<string>:tags</string>
+				<string>:bkms</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
@@ -1834,7 +1834,7 @@ Set other useful features in `Configure Workflow`.
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>5.2.1</string>
+	<string>6.1.1</string>
 	<key>webaddress</key>
 	<string>toddsgotapen.com</string>
 </dict>

@@ -4,13 +4,5 @@
 <dict>
 	<key>browser</key>
 	<string>Brave Browser</string>
-	<key>tag_it</key>
-	<string>tagi||ti</string>
-	<key>tag_list</key>
-	<string>tagl||tl</string>
-	<key>tag_recent</key>
-	<string>tagr||tr</string>
-	<key>tag_search</key>
-	<string>tags||ts</string>
 </dict>
 </plist>

@@ -21,7 +21,7 @@ with open(items_path, "r") as f:
 items = []
 for block in data:
     tag = block.get("tag", "")
-    type_counts = { "email":0, "file":0, "bookmark":0}
+    type_counts = { "email":0, "file":0, "webpage":0}
 
     for item in block.get("items", []):
         t = item.get("type")
@@ -32,12 +32,12 @@ for block in data:
     if not any(type_counts.values()):
         continue
 
-    # Build summary string like: [2 emails, 4 bookmarks, 1 file]
+    # Build summary string like: [2 emails, 4 webpage, 1 file]
     type_labels = []
     if type_counts["email"]:
         type_labels.append(f'{type_counts["email"]} email{"s" if type_counts["email"] > 1 else ""}')
-    if type_counts["bookmark"]:
-        type_labels.append(f'{type_counts["bookmark"]} bookmark{"s" if type_counts["bookmark"] > 1 else ""}')
+    if type_counts["webpage"]:
+        type_labels.append(f'{type_counts["webpage"]} webpage{"s" if type_counts["webpage"] > 1 else ""}')
     if type_counts["file"]:
         type_labels.append(f'{type_counts["file"]} file{"s" if type_counts["file"] > 1 else ""}')
 

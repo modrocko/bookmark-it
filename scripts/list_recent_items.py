@@ -34,7 +34,7 @@ valid_uids = {
 
 items = []
 updated_recent = []
-bookmark_icon = utils.get_bookmark_icon()
+webpage_icon = utils.get_webpage_icon()
 
 for entry in recent:
     uid = entry.get("uid")
@@ -46,7 +46,7 @@ for entry in recent:
     ############################
     #skip the file type if it no longeer exists on disk
 
-    fields = utils.get_item_fields(entry, tag, bookmark_icon)
+    fields = utils.get_item_fields(entry, tag, webpage_icon)
     if not fields:
         continue
 
@@ -57,7 +57,7 @@ for entry in recent:
 
     updated_recent.append(entry)  # ✅ Keep all valid entries (entries that also exising in main data file)
 
-    fields = utils.get_item_fields(entry, tag, bookmark_icon)
+    fields = utils.get_item_fields(entry, tag, webpage_icon)
     if not fields:
         continue
 

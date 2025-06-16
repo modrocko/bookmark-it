@@ -42,7 +42,7 @@ def build_mods(tag):
             "arg": tag,
             "subtitle": "⌥ Tag browser tabs",
             "variables": {
-                "item_type": "bookmark",
+                "item_type": "webpage",
                 "tag": tag
             }
         }

@@ -26,7 +26,7 @@ items = [{}]
 #    "icon": { "path": "info.png" }
 #}]
 
-bookmark_icon = utils.get_bookmark_icon()
+webpage_icon = utils.get_webpage_icon()
 
 for group in tag_groups:
     tag = group.get("tag", "")
@@ -34,7 +34,7 @@ for group in tag_groups:
     for item in group.get("items", []):
 
         # get fields for this item
-        fields = utils.get_item_fields(item, tag, bookmark_icon)
+        fields = utils.get_item_fields(item, tag, webpage_icon)
         if not fields:
             continue
 

@@ -28,7 +28,7 @@ if not item:
 # pick correct field by type
 field = {
     "email": "subject",
-    "bookmark": "title",
+    "webpage": "title",
     "file": "name",
     "note": "name"
 }.get(item.get("type"))

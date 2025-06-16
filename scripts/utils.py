@@ -4,7 +4,7 @@ import json
 
 ########################################
 #get the right icon based on the current browser setting
-def get_bookmark_icon():
+def get_webpage_icon():
     browser = os.environ.get("browser", "Safari")
     paths = {
         "Safari": "/System/Applications/Safari.app",
@@ -88,7 +88,7 @@ def add_to_recent(entry, tag):
 
 #######################################
 # get files for an item
-def get_item_fields(item, tag, bookmark_icon):
+def get_item_fields(item, tag, webpage_icon):
     item_type = item.get("type")
     uid = item.get("uid")
     title = ""
@@ -116,12 +116,12 @@ def get_item_fields(item, tag, bookmark_icon):
         path = "message://" + urllib.parse.quote(f"<{message_id}>")
         icon = { "path": "/System/Applications/Mail.app", "type": "fileicon" }
 
-    elif item_type == "bookmark":
+    elif item_type == "webpage":
         title = item.get("title") or item.get("url", "")
         url = item.get("url", "")
         subtitle = url
         path = url
-        icon = get_icon(item, bookmark_icon)
+        icon = get_icon(item, webpage_icon)
 
     else:
         return None  # skip unknown

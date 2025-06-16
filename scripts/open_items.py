@@ -34,7 +34,7 @@ for item in block.get("items", []):
         if path and os.path.exists(path):
             subprocess.run(["open", path])
 
-    elif item_type == "bookmark":
+    elif item_type == "webpage":
         url = item.get("url")
         if url:
             browser = os.environ.get("browser")

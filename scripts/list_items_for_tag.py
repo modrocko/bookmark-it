@@ -16,7 +16,7 @@ workflow_dir = os.environ["alfred_workflow_data"]
 items_path = os.path.join(workflow_dir, "items.json")
 workflow_dir_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-bookmark_icon = utils.get_bookmark_icon()
+webpage_icon = utils.get_webpage_icon()
 
 # Load tagged data
 if not os.path.exists(items_path):
@@ -36,7 +36,7 @@ items = []
 for entry in block["items"]:
 
     # get fields for this item
-    fields = utils.get_item_fields(entry, query_tag, bookmark_icon)
+    fields = utils.get_item_fields(entry, query_tag, webpage_icon)
     if not fields:
         continue
 

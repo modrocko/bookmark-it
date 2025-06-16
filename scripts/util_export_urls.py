@@ -6,7 +6,7 @@ workflow_data = os.getenv('alfred_workflow_data')
 workflow_name = os.getenv('alfred_workflow_name', 'Tag It')
 
 input_path = os.path.join(workflow_data, 'items.json')
-output_path = os.path.join(workflow_data, 'bookmarks.md')
+output_path = os.path.join(workflow_data, 'webpages.md')
 
 with open(input_path, 'r') as f:
     data = json.load(f)
@@ -14,13 +14,13 @@ with open(input_path, 'r') as f:
 with open(output_path, 'w') as f:
     for group in data:
         tag = group.get('tag', 'No tag')
-        bookmarks = [
+        webpages = [
             item for item in group.get('items', [])
-            if item.get('type') == 'bookmark'
+            if item.get('type') == 'webpage'
         ]
-        if bookmarks:
+        if webpages:
             f.write(f"## {tag}\n\n")
-            for b in bookmarks:
+            for b in webpages:
                 title = b.get('title', 'No title')
                 url = b.get('url', '')
                 f.write(f"- [{title}]({url})\n")
@@ -29,5 +29,5 @@ with open(output_path, 'w') as f:
 # **Show notification**
 subprocess.run([
     "osascript", "-e",
-    f'display notification "Exported bookmarks to bookmarks.md" with title "{workflow_name}"'
+    f'display notification "Exported webpages to webpages.md" with title "{workflow_name}"'
 ])

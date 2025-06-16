@@ -25,7 +25,7 @@ if not block or not block.get("items"):
 # Group counts by type
 counts = {
     "email": [],
-    "bookmark": [],
+    "webpage": [],
     "file": []
 }
 
@@ -56,13 +56,13 @@ items.append({
 # Mapping per type
 labels = {
     "email": "Emails",
-    "bookmark": "Bookmarks",
+    "webpage": "Webpages",
     "file": "Files"
 }
 
 icons = {
   "email": { "path": "/System/Applications/Mail.app", "type": "fileicon"},
-  "bookmark": utils.get_bookmark_icon(),
+  "webpage": utils.get_webpage_icon(),
   "file": { "path": "/System/Library/CoreServices/Finder.app", "type": "fileicon" }
 }
 

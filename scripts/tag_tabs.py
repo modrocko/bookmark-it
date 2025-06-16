@@ -91,7 +91,7 @@ if not tag_block:
     tag_block = { "tag": tag, "items": [] }
     data.append(tag_block)
 
-# Process tabs into bookmark items
+# Process tabs into webpage items
 added = 0
 for item in decoded.split("%%"):
     if not item.strip():
@@ -103,13 +103,13 @@ for item in decoded.split("%%"):
     title, url = parts[0].strip(), parts[1].strip()
 
     already_tagged = any(
-        entry.get("type") == "bookmark" and entry.get("url") == url
+        entry.get("type") == "webpage" and entry.get("url") == url
         for entry in tag_block["items"]
     )
 
     if not already_tagged:
         tag_block["items"].append({
-            "type": "bookmark",
+            "type": "webpage",
             "title": title,
             "url": url,
             "uid": str(uuid.uuid4())
