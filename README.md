@@ -14,9 +14,9 @@ Works with: `Apple Mail` ∙ `Apple Finder` ∙ `Chrome, Brave, Safari, Arc & Ed
 
 ![tag](assets/tag.png) 
 
- Tag It!
+###  Bookmark It!
 
-To get started... tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or select an existing tag.
+To get started... bookmark emails, files, folders or webpages. Keep typing to create a new tag. Or select an existing tag.
 
 ![tagi](assets/tagi.png)    
 
@@ -60,11 +60,27 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 
 ![tags](assets/tags.png)   
 
+By default, all searches are `AND` searches — whatever you type, will show bookmarks that fulfill all of your search criteria. This feature also supports `OR` searches. Just supply `:or`at the end of your query: `bkms @wait @ping :or`
+
+
+
 <kbd>↵</kbd>  Open the selected item
 
 <kbd>⌘</kbd><kbd>↵</kbd> Remove the item (untag) from this tag
 
 <kbd>⌥</kbd><kbd>↵</kbd> Rename the item (good for applying a note too)
+
+<kbd>⌃</kbd><kbd>↵</kbd> Save this search to quickly access later
+
+### List saved searches
+
+List any searches saved from the dialog above.
+
+![](assets/bkmss.png) 
+
+<kbd>↵</kbd> Run this saved search
+
+<kbd>⌘</kbd><kbd>↵</kbd> Remove this saved search
 
 ### Show recent items
 

@@ -521,6 +521,30 @@ python3 scripts/remove_items_from_tag.py "$1"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>cd "$alfred_workflow_directory"
+python3 scripts/open_items.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2E049BF0-4133-41C3-A115-1294AA5E009B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -566,30 +590,6 @@ python3 scripts/list_tag_groups.py "$1"
 			<string>01DC141D-19B5-49A1-8877-E3D88B065C03</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>cd "$alfred_workflow_directory"
-python3 scripts/open_items.py "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>2E049BF0-4133-41C3-A115-1294AA5E009B</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -891,21 +891,6 @@ python3 scripts/list_items_for_tag.py "$1"
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>refresh_list_tags</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>9AE61FB2-0B3C-48EB-ADFD-7B296C5FE0AD</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -928,6 +913,21 @@ osascript -e "tell application \"Alfred 5\" to run trigger \"refresh_list_tags\"
 			<string>9DC7200D-643A-4990-B761-C80BA6F83B1F</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>refresh_list_tags</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>9AE61FB2-0B3C-48EB-ADFD-7B296C5FE0AD</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1335,9 +1335,9 @@ Works with: `Apple Mail` ∙ `Apple Finder` ∙ `Chrome, Brave, Safari, Arc &amp
 
 ![tag](assets/tag.png) 
 
- Tag It!
+###  Bookmark It!
 
-To get started... tag emails, files, folders or browser tabs. Keep typing to create a new tag. Or select an existing tag.
+To get started... bookmark emails, files, folders or webpages. Keep typing to create a new tag. Or select an existing tag.
 
 ![tagi](assets/tagi.png)    
 
@@ -1381,11 +1381,27 @@ Show complete, flat list of all previously tagged items. Start typing to filter 
 
 ![tags](assets/tags.png)   
 
+By default, all searches are `AND` searches — whatever you type, will show bookmarks that fulfill all of your search criteria. This feature also supports `OR` searches. Just supply `:or`at the end of your query: `bkms @wait @ping :or`
+
+
+
 &lt;kbd&gt;↵&lt;/kbd&gt;  Open the selected item
 
 &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; Remove the item (untag) from this tag
 
 &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; Rename the item (good for applying a note too)
+
+&lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; Save this search to quickly access later
+
+### List saved searches
+
+List any searches saved from the dialog above.
+
+![](assets/bkmss.png) 
+
+&lt;kbd&gt;↵&lt;/kbd&gt; Run this saved search
+
+&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; Remove this saved search
 
 ### Show recent items
 
