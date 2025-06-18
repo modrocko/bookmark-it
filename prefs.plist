@@ -4,6 +4,8 @@
 <dict>
 	<key>browser</key>
 	<string>Brave Browser</string>
+	<key>run_save</key>
+	<string>bkmss||bss</string>
 	<key>tag_it</key>
 	<string>bkmi||bi</string>
 	<key>tag_list</key>

@@ -5,6 +5,13 @@ import urllib.parse
 import utils
 
 query = utils.normalize_symbols(sys.argv[1].strip().lower()) if len(sys.argv) > 1 else ""
+raw_query = query
+
+use_or = False
+if query.endswith(":or"):
+    use_or = True
+    query = query[:-3].strip()
+
 
 print(f"QUERY: {query}", file=sys.stderr)
 
@@ -47,11 +54,16 @@ for group in tag_groups:
 
         # perform search
         terms = query.split()
-        if not all(
-            any(term in (x or "").lower() for x in [tag, title, item_type, subtitle])
-            for term in terms
-        ):
-            continue
+        search_fields = [tag, title, item_type, subtitle]
+
+        if query:
+            if use_or:
+                if not any(term in (f or "").lower() for term in terms for f in search_fields):
+                    continue
+            else:
+                if not all(any(term in (f or "").lower() for f in search_fields) for term in terms):
+                    continue
+
 
         subtitle = f"[{tag}] • [{item_type}] • {subtitle}"
 
@@ -86,8 +98,15 @@ for group in tag_groups:
                         "uid": uid,
                         "old_title": title,
                         "caller": "search_tags"
+                    }
+                },
+                "ctrl": {
+                    "subtitle": "⌃ Save this search",
+                    "arg": raw_query,
+                    "variables": {
+                        "caller": "search_tags"
+                    }
                 }
-              }
             }
         })
 
