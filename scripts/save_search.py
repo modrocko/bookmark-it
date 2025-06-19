@@ -5,6 +5,9 @@ import sys
 import json
 import subprocess
 
+if os.environ.get("action") != "save_search":
+    sys.exit(0)
+
 query = sys.argv[1].strip() if len(sys.argv) > 1 else ""
 if not query:
     sys.exit(0)
@@ -37,9 +40,9 @@ if query in existing_queries:
 # Save to top of list
 saved.insert(0, { "query": query })
 
-# Write back (limit to 10)
+# Limit count as specified by env var
+max_count = int(os.environ["saved_search_count"])
 with open(save_path, "w") as f:
-    max_count = int(os.environ["saved_search_count"])
     json.dump(saved[:max_count], f, indent=2)
 
 

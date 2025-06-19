@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import sys
 import json
@@ -12,7 +14,6 @@ if query.endswith(":or"):
     use_or = True
     query = query[:-3].strip()
 
-
 print(f"QUERY: {query}", file=sys.stderr)
 
 workflow_dir = os.environ["alfred_workflow_data"]
@@ -25,13 +26,19 @@ if not os.path.exists(items_path):
 with open(items_path, "r") as f:
     tag_groups = json.load(f)
 
-items = [{}]
-#items = [{
-#    "title": "Keyboard shortcuts",
-#    "subtitle": "↵ Open • ⌘ Remove item • ⌥ Rename title",
-#    "valid": False,
-#    "icon": { "path": "info.png" }
-#}]
+# Start items list, include save option if query exists
+items = []
+if raw_query:
+    items.append({
+        "title": "Save this search",
+        "subtitle": "↵ to Save this search",
+        "arg": raw_query,
+        "icon": { "path": "save.png" },
+        "variables": {
+            "action": "save_search"
+        }
+    })
+
 
 webpage_icon = utils.get_webpage_icon()
 
@@ -40,7 +47,6 @@ for group in tag_groups:
 
     for item in group.get("items", []):
 
-        # get fields for this item
         fields = utils.get_item_fields(item, tag, webpage_icon)
         if not fields:
             continue
@@ -52,7 +58,6 @@ for group in tag_groups:
         path = fields["path"]
         icon = fields["icon"]
 
-        # perform search
         terms = query.split()
         search_fields = [tag, title, item_type, subtitle]
 
@@ -64,10 +69,8 @@ for group in tag_groups:
                 if not all(any(term in (f or "").lower() for f in search_fields) for term in terms):
                     continue
 
-
         subtitle = f"[{tag}] • [{item_type}] • {subtitle}"
 
-        #override icon is special tag is specified
         custom_icon = utils.get_icon_for_tag(title, subtitle)
         if custom_icon != "":
             icon = custom_icon
@@ -99,24 +102,16 @@ for group in tag_groups:
                         "old_title": title,
                         "caller": "search_tags"
                     }
-                },
-                "ctrl": {
-                    "subtitle": "⌃ Save this search",
-                    "arg": raw_query,
-                    "variables": {
-                        "caller": "search_tags"
-                    }
                 }
             }
         })
 
-# Fallback if no match
-if len(items) == 1:
-    items = [{
+if len(items) == 0:
+    items.append({
         "title": "No matches found",
         "subtitle": "So tag some!",
         "valid": False,
         "icon": { "path": "info.png" }
-    }]
+    })
 
 print(json.dumps({ "items": items }))

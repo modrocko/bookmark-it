@@ -5,6 +5,9 @@ import subprocess
 import urllib.parse
 import utils
 
+if os.environ.get("action") == "save_search":
+    sys.exit(0)
+
 # get tag & uid from env vars
 tag=os.environ["tag"]
 uid=os.environ["uid"]

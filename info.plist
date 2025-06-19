@@ -67,9 +67,9 @@
 				<key>destinationuid</key>
 				<string>9C1A5D64-F78B-4B4F-9083-49B2DD1ACC72</string>
 				<key>modifiers</key>
-				<integer>262144</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string></string>
+				<string>⌃ to save this search</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
