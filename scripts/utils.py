@@ -137,23 +137,26 @@ def get_item_fields(item, tag, webpage_icon):
 
 
 
-
 #######################################
-# get the icon based on it's specific tag
+# get the icon based on its specific tag
+# cache the icon map
+_icon_map = None
+
 def get_icon_for_tag(*strings):
-    tag_icons = {
-        "@urgent": "urgent.png",
-        "@waiting": "waiting.png",
-        "@ping": "ping.png",
-        "@notes": "notes.png"
-    }
+    global _icon_map
+    if _icon_map is None:
+        # load tag_icons from env var
+        try:
+            _icon_map = json.loads(os.environ["tag_icons"])
+        except Exception:
+            _icon_map = {}
 
     for string in strings:
         if not isinstance(string, str):
             continue
-        for keyword, filename in tag_icons.items():
+        for keyword, filename in _icon_map.items():
             if keyword in string:
-                icon_path = os.path.join(os.path.dirname(__file__), "..", filename)
+                icon_path = os.path.join(os.path.dirname(__file__), "..", "icons", filename)
                 return { "path": os.path.abspath(icon_path) }
 
     return ""

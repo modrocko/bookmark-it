@@ -106,10 +106,10 @@ for group in tag_groups:
             }
         })
 
-if len(items) == 0:
+if len(items) == 1:
     items.append({
         "title": "No matches found",
-        "subtitle": "So tag some!",
+        "subtitle": "Maybe next time",
         "valid": False,
         "icon": { "path": "info.png" }
     })

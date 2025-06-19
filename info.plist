@@ -2049,11 +2049,38 @@ Set other useful features in `Configure Workflow`.
 			<key>variable</key>
 			<string>symbols</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>{
+  "@urgent": "urgent.png",
+  "@waiting": "waiting.png",
+  "@ping": "ping.png",
+  "@orders": "orders.png",
+  "@notes": "notes.png"
+}</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+				<key>verticalsize</key>
+				<integer>9</integer>
+			</dict>
+			<key>description</key>
+			<string>Associate custom icons for your tags to make everything look 'nice.' Add or change as you like.</string>
+			<key>label</key>
+			<string>Custom tag icons</string>
+			<key>type</key>
+			<string>textarea</string>
+			<key>variable</key>
+			<string>tag_icons</string>
+		</dict>
 	</array>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>6.3.5</string>
+	<string>6.3.6</string>
 	<key>webaddress</key>
 	<string>toddsgotapen.com</string>
 </dict>
