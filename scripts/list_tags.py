@@ -41,7 +41,7 @@ for block in data:
     if type_counts["file"]:
         type_labels.append(f'{type_counts["file"]} file{"s" if type_counts["file"] > 1 else ""}')
 
-    subtitle = f"[{', '.join(type_labels)}] • ↵ View tag(s) • ⌘ Rename tag • ⌥ Remove tag • ⌃ View items"
+    subtitle = f"[{', '.join(type_labels)}] • ↵ View types • ⌘ Rename • ⌥ Remove • ⌃ View all"
 
     #override icon is special tag is specified
     icon = utils.get_icon_for_tag(tag)
