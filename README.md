@@ -8,6 +8,8 @@ Works with: `Apple Mail` ∙ `Apple Finder` ∙ `Chrome, Brave, Safari, Arc & Ed
 
 > *Check out Bookmark It!'s brother workflow, [Restore It!](https://github.com/modrocko/restore-it)*
 
+▸ [Download latest workflow](https://github.com/modrocko/bookmark-it/releases/latest)
+
 ## Usage
 
 ### Main workflows
