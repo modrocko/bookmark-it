@@ -114,7 +114,7 @@ if len(items) == 1:
         "icon": { "path": "info.png" }
     })
 else:
-    total = len(items)
+    total = len(items) - 1
     items.insert(0, {
         "title": f"{total} tagged items",
         "valid": False,
