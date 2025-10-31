@@ -113,5 +113,12 @@ if len(items) == 1:
         "valid": False,
         "icon": { "path": "info.png" }
     })
+else:
+    total = len(items)
+    items.insert(0, {
+        "title": f"{total} tagged items",
+        "valid": False,
+        "icon": { "path": "info.png" }
+    })
 
 print(json.dumps({ "items": items }))
