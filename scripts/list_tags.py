@@ -83,6 +83,13 @@ if not items:
         "valid": False,
         "icon": { "path": "info.png" }
     })
+else:
+    total = len(items)
+    items.insert(0, {
+        "title": f"{total} tagged groups",
+        "valid": False,
+        "icon": { "path": "info.png" }
+    })
 
 items.sort(key=lambda x: x["title"].lower())
 print(json.dumps({ "items": items }))
